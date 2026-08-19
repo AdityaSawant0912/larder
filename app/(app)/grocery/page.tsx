@@ -53,7 +53,7 @@ export default function GroceryListPage() {
   const [reviewDefaults, setReviewDefaults] = useState<Record<string, { location: Location; shelfLifeDays: number }>>({});
 
   const visible = (items ?? []).filter((item) =>
-    selectedStore === "any" ? item.storeId === null : item.storeId === selectedStore || item.storeId === null
+    selectedStore === "any" ? true : item.storeId === selectedStore || item.storeId === null
   );
 
   function toggleReviewSelect(id: string) {
