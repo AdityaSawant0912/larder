@@ -7,9 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-data);
+  --font-display: var(--font-display);
+  --font-heading: var(--font-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -39,6 +40,11 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  /* Freshness gauge states — the design's signature element
+     (docs/06-design-system.md). */
+  --color-fresh: var(--fresh);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -48,73 +54,81 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* Whiteboard (light) — docs/06-design-system.md */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --background: #f1f0ec;
+  --foreground: #2b2e2a;
+  --card: #ffffff;
+  --card-foreground: #2b2e2a;
+  --popover: #ffffff;
+  --popover-foreground: #2b2e2a;
+  --primary: #3e6c82;
+  --primary-foreground: #f1f0ec;
+  --secondary: #e7e5df;
+  --secondary-foreground: #2b2e2a;
+  --muted: #e7e5df;
+  --muted-foreground: #6b6f68;
+  --accent: #dce7ea;
+  --accent-foreground: #2b2e2a;
+  --destructive: #a6483b;
+  --border: color-mix(in oklab, #2b2e2a 12%, transparent);
+  --input: color-mix(in oklab, #2b2e2a 16%, transparent);
+  --ring: #3e6c82;
+  --fresh: #4c7a57;
+  --warning: #96690f;
+  --danger: #a6483b;
+  --chart-1: #4c7a57;
+  --chart-2: #96690f;
+  --chart-3: #a6483b;
+  --chart-4: #3e6c82;
+  --chart-5: #6b6f68;
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #e7e5df;
+  --sidebar-foreground: #2b2e2a;
+  --sidebar-primary: #3e6c82;
+  --sidebar-primary-foreground: #f1f0ec;
+  --sidebar-accent: #dce7ea;
+  --sidebar-accent-foreground: #2b2e2a;
+  --sidebar-border: color-mix(in oklab, #2b2e2a 12%, transparent);
+  --sidebar-ring: #3e6c82;
 }
 
+/* Blackboard (dark) — docs/06-design-system.md */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #1e2420;
+  --foreground: #edeae0;
+  --card: #262d28;
+  --card-foreground: #edeae0;
+  --popover: #262d28;
+  --popover-foreground: #edeae0;
+  --primary: #9fc3d9;
+  --primary-foreground: #1e2420;
+  --secondary: #2c332d;
+  --secondary-foreground: #edeae0;
+  --muted: #2c332d;
+  --muted-foreground: #a9afa9;
+  --accent: #33424a;
+  --accent-foreground: #edeae0;
+  --destructive: #e2938a;
+  --border: color-mix(in oklab, #edeae0 12%, transparent);
+  --input: color-mix(in oklab, #edeae0 16%, transparent);
+  --ring: #9fc3d9;
+  --fresh: #a8cbb0;
+  --warning: #e3be7e;
+  --danger: #e2938a;
+  --chart-1: #a8cbb0;
+  --chart-2: #e3be7e;
+  --chart-3: #e2938a;
+  --chart-4: #9fc3d9;
+  --chart-5: #a9afa9;
+  --sidebar: #262d28;
+  --sidebar-foreground: #edeae0;
+  --sidebar-primary: #9fc3d9;
+  --sidebar-primary-foreground: #1e2420;
+  --sidebar-accent: #33424a;
+  --sidebar-accent-foreground: #edeae0;
+  --sidebar-border: color-mix(in oklab, #edeae0 12%, transparent);
+  --sidebar-ring: #9fc3d9;
 }
 
 @layer base {
@@ -127,4 +141,15 @@
   html {
     @apply font-sans;
   }
+}
+
+/* Faint fractal-noise grain, board (page background) only — never on
+   cards, so text always sits on a clean flat surface (docs/06). */
+.board-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
 }
