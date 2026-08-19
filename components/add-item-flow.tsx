@@ -19,6 +19,7 @@ import { useCatalogSearch } from "@/lib/queries/items";
 import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
 import { UnitPicker } from "@/components/unit-picker";
 import { LOCATIONS, type Location } from "@/lib/schemas/location";
+import { CATEGORIES } from "@/lib/constants/unitPresets";
 import type { ItemSelectionInput } from "@/lib/types/dto";
 
 export interface AddItemDetails {
@@ -198,11 +199,18 @@ export function AddItemFlow({
           </div>
           <div className="space-y-1.5">
             <Label>Category</Label>
-            <Input
-              placeholder="produce, dairy, pantry, ..."
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            />
+            <Select value={category} onValueChange={(v) => setCategory(v ?? "")}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select a category" />
+              </SelectTrigger>
+              <SelectContent>
+                {CATEGORIES.map((cat) => (
+                  <SelectItem key={cat} value={cat}>
+                    {cat}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
           <Button className="w-full" disabled={!name || !category} onClick={confirmManual}>
             Continue
