@@ -33,11 +33,13 @@ Next Grocery List → groceryList     (separate, can reference a userItem)
 ## Collections
 
 ### `users`
+
 **Superseded — see "Auth collections" below.** Better Auth's MongoDB
 adapter owns user storage directly (its own `user` collection, plus
 `session`/`account`); this app doesn't hand-roll `email`/`passwordHash`
 itself. Left here only to show what was originally planned before the
 Better Auth decision.
+
 ```
 {
   _id,
@@ -48,9 +50,11 @@ Better Auth decision.
 ```
 
 ### `userItems`
+
 User Catalog entry (identity + editable defaults) with live stock
 embedded. Settings screen edits the top-level fields; Home screen
 (Current Pantry) reads/writes `forms`.
+
 ```
 {
   _id,
@@ -79,6 +83,7 @@ embedded. Settings screen edits the top-level fields; Home screen
   updatedAt
 }
 ```
+
 Atlas Search index on `name` (fuzzy + autocomplete), scoped by `userId`.
 
 An item can exist in User Catalog with `forms: []` — "I know about
@@ -86,7 +91,9 @@ bananas, I have my defaults set, I just don't have any right now." Nothing
 gets deleted; Home just shows it as empty/low instead of missing.
 
 ### `globalItems`
+
 Moderated/auto-populated catalog.
+
 ```
 {
   _id,
@@ -99,18 +106,23 @@ Moderated/auto-populated catalog.
   createdAt
 }
 ```
+
 Atlas Search index on `name` (fuzzy + autocomplete).
 
 ### Stores — same mechanic as items, thinner
+
 No unit/location/shelf-life defaults to carry, so linking has no copy
 step — only whether the store exists in the user's list.
+
 ```
 globalStores: { _id, name }                          // Aldi, Walmart, Target, Tops...
 userStores:   { _id, userId, name, globalStoreId | null }
 ```
 
 ### `groceryList`
+
 The "Next Grocery List."
+
 ```
 {
   _id,
@@ -125,6 +137,7 @@ The "Next Grocery List."
   createdAt
 }
 ```
+
 Index: `{ userId: 1, storeId: 1 }`.
 
 `userItemId` is what makes "add everything to pantry" (the online-order
@@ -134,7 +147,9 @@ catalog match), adding to pantry creates a new `userItems` entry first,
 same as manual entry would.
 
 ### `listTemplates`
+
 For "Repeat list."
+
 ```
 {
   _id,
@@ -167,6 +182,7 @@ via "Other →" get offered back as chips next time, growing with actual
 habits:
 
 **`userUnitPresets`**
+
 ```
 {
   _id,
@@ -193,6 +209,7 @@ one deliberate exception this makes to the "only repositories touch the
 DB" rule.
 
 ## Deferred from v1 schema
+
 - `wasteLog` — Clear-Out's discard action does **not** reference a
   waste-log toggle in v1 (moved to v2, see `09-v2-roadmap.md` — this was
   an inconsistency in the original screen spec, now resolved).
