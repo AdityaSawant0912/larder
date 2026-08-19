@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Larder — palette preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0d0f0e;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .board {
+    width: 340px;
+    border-radius: 18px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+  .board::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%25" height="100%25" filter="url(%23n)"/></svg>');
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  .board.dark { background: #1E2420; }
+  .board.light { background: #F1F0EC; }
+
+  .label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.5; margin-bottom: 4px; position: relative; }
+  .dark .label { color: #EDEAE0; }
+  .light .label { color: #2B2E2A; }
+
+  h1 { font-family: 'Caveat', cursive; font-weight: 700; font-size: 34px; margin: 0 0 2px; position: relative; }
+  .dark h1 { color: #EDEAE0; }
+  .light h1 { color: #2B2E2A; }
+  .sub { font-size: 12px; margin: 0 0 18px; position: relative; }
+  .dark .sub { color: #A9B5AE; }
+  .light .sub { color: #6C716B; }
+
+  .card {
+    border-radius: 14px;
+    padding: 14px 16px;
+    position: relative;
+    margin-bottom: 12px;
+  }
+  .dark .card { background: rgba(237,234,224,0.05); border: 1px solid rgba(237,234,224,0.1); }
+  .light .card { background: #FFFFFF; border: 1px solid rgba(43,46,42,0.08); }
+
+  .item-name { font-family: 'Caveat', cursive; font-weight: 600; font-size: 24px; margin: 0 0 10px; position: relative; }
+  .dark .item-name { color: #EDEAE0; }
+  .light .item-name { color: #2B2E2A; }
+
+  .form-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+  .form-row + .form-row { border-top: 1px dashed; }
+  .dark .form-row + .form-row { border-color: rgba(237,234,224,0.12); }
+  .light .form-row + .form-row { border-color: rgba(43,46,42,0.1); }
+
+  .qty { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; }
+  .dark .qty { color: #EDEAE0; }
+  .light .qty { color: #2B2E2A; }
+  .meta { font-size: 10.5px; margin-top: 2px; }
+  .dark .meta { color: #8E9990; }
+  .light .meta { color: #86897F; }
+
+  .gauge { width: 72px; height: 14px; }
+
+  .swatches { display: flex; gap: 8px; margin-top: 16px; position: relative; flex-wrap: wrap; }
+  .swatch { width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; }
+  .swatch-label { font-size: 9px; text-align: center; margin-top: 3px; }
+</style>
+</head>
+<body>
+
+<div class="board dark">
+  <div class="label">Blackboard · dark</div>
+  <h1>Larder</h1>
+  <p class="sub">What's fresh, what's not, what's missing.</p>
+
+  <div class="card">
+    <p class="item-name">Watermelon</p>
+    <div class="form-row">
+      <div>
+        <div class="qty">1 whole</div>
+        <div class="meta">Counter · 5d left</div>
+      </div>
+      <svg class="gauge" viewBox="0 0 72 14">
+        <path d="M2,7 C10,4 20,10 30,6 C40,3 50,9 60,6 C64,5 68,7 70,7" fill="none" stroke="#A8CBB0" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="form-row">
+      <div>
+        <div class="qty">2 containers</div>
+        <div class="meta">Fridge · 500ml · 1d left</div>
+      </div>
+      <svg class="gauge" viewBox="0 0 72 14">
+        <path d="M2,7 C8,5 14,9 20,6 C26,3 32,8 38,6" fill="none" stroke="#E3BE7E" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="item-name">Garlic</p>
+    <div class="form-row">
+      <div>
+        <div class="qty">1 bulb</div>
+        <div class="meta">Pantry · 2d left</div>
+      </div>
+      <svg class="gauge" viewBox="0 0 72 14">
+        <path d="M2,7 C6,5 10,9 14,6" fill="none" stroke="#E2938A" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="swatches">
+    <div><div class="swatch" style="background:#1E2420; border:1px solid #444"></div><div class="swatch-label" style="color:#A9B5AE">Board</div></div>
+    <div><div class="swatch" style="background:#EDEAE0"></div><div class="swatch-label" style="color:#A9B5AE">Chalk white</div></div>
+    <div><div class="swatch" style="background:#A8CBB0"></div><div class="swatch-label" style="color:#A9B5AE">Sage</div></div>
+    <div><div class="swatch" style="background:#E3BE7E"></div><div class="swatch-label" style="color:#A9B5AE">Amber</div></div>
+    <div><div class="swatch" style="background:#E2938A"></div><div class="swatch-label" style="color:#A9B5AE">Coral</div></div>
+    <div><div class="swatch" style="background:#9FC3D9"></div><div class="swatch-label" style="color:#A9B5AE">Dusty blue</div></div>
+  </div>
+</div>
+
+<div class="board light">
+  <div class="label">Whiteboard · light</div>
+  <h1>Larder</h1>
+  <p class="sub">What's fresh, what's not, what's missing.</p>
+
+  <div class="card">
+    <p class="item-name">Watermelon</p>
+    <div class="form-row">
+      <div>
+        <div class="qty">1 whole</div>
+        <div class="meta">Counter · 5d left</div>
+      </div>
+      <svg class="gauge" viewBox="0 0 72 14">
+        <path d="M2,7 C10,4 20,10 30,6 C40,3 50,9 60,6 C64,5 68,7 70,7" fill="none" stroke="#4C7A57" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="form-row">
+      <div>
+        <div class="qty">2 containers</div>
+        <div class="meta">Fridge · 500ml · 1d left</div>
+      </div>
+      <svg class="gauge" viewBox="0 0 72 14">
+        <path d="M2,7 C8,5 14,9 20,6 C26,3 32,8 38,6" fill="none" stroke="#96690F" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="item-name">Garlic</p>
+    <div class="form-row">
+      <div>
+        <div class="qty">1 bulb</div>
+        <div class="meta">Pantry · 2d left</div>
+      </div>
+      <svg class="gauge" viewBox="0 0 72 14">
+        <path d="M2,7 C6,5 10,9 14,6" fill="none" stroke="#A6483B" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="swatches">
+    <div><div class="swatch" style="background:#F1F0EC; border:1px solid #ccc"></div><div class="swatch-label" style="color:#86897F">Board</div></div>
+    <div><div class="swatch" style="background:#2B2E2A"></div><div class="swatch-label" style="color:#86897F">Ink</div></div>
+    <div><div class="swatch" style="background:#4C7A57"></div><div class="swatch-label" style="color:#86897F">Sage</div></div>
+    <div><div class="swatch" style="background:#96690F"></div><div class="swatch-label" style="color:#86897F">Amber</div></div>
+    <div><div class="swatch" style="background:#A6483B"></div><div class="swatch-label" style="color:#86897F">Coral</div></div>
+    <div><div class="swatch" style="background:#3E6C82"></div><div class="swatch-label" style="color:#86897F">Dusty blue</div></div>
+  </div>
+</div>
+
+</body>
+</html>
