@@ -2,6 +2,7 @@
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiGet, apiPost, apiPatch, apiDelete } from "@/lib/api/client";
+import { useSoonKey } from "@/lib/queries/useSoon";
 import type {
   UserItemDTO,
   CatalogSearchResultDTO,
@@ -99,6 +100,7 @@ export function useResolveAndAddForm() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: itemKeys.catalog });
+      qc.invalidateQueries({ queryKey: useSoonKey });
     },
   });
 }
@@ -108,7 +110,10 @@ export function useConsumeForm() {
   return useMutation({
     mutationFn: ({ itemId, formId, qty }: { itemId: string; formId: string; qty: number }) =>
       apiPatch(`/api/items/${itemId}/forms/${formId}`, { action: "consume", qty }),
-    onSuccess: () => qc.invalidateQueries({ queryKey: itemKeys.pantry }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: itemKeys.pantry });
+      qc.invalidateQueries({ queryKey: useSoonKey });
+    },
   });
 }
 
@@ -132,7 +137,10 @@ export function useConvertForm() {
       formId: string;
       outputs: ConvertOutput[];
     }) => apiPatch(`/api/items/${itemId}/forms/${formId}`, { action: "convert", outputs }),
-    onSuccess: () => qc.invalidateQueries({ queryKey: itemKeys.pantry }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: itemKeys.pantry });
+      qc.invalidateQueries({ queryKey: useSoonKey });
+    },
   });
 }
 
@@ -141,7 +149,10 @@ export function useDeleteForm() {
   return useMutation({
     mutationFn: ({ itemId, formId }: { itemId: string; formId: string }) =>
       apiDelete(`/api/items/${itemId}/forms/${formId}`),
-    onSuccess: () => qc.invalidateQueries({ queryKey: itemKeys.pantry }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: itemKeys.pantry });
+      qc.invalidateQueries({ queryKey: useSoonKey });
+    },
   });
 }
 
@@ -164,6 +175,7 @@ export function useCommitRestock() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: itemKeys.catalog });
+      qc.invalidateQueries({ queryKey: useSoonKey });
     },
   });
 }
@@ -174,6 +186,9 @@ export function useDiscardClearOut() {
   return useMutation({
     mutationFn: (selections: { itemId: string; formId: string }[]) =>
       apiPost<{ ok: true; count: number }>("/api/clear-out/discard", { selections }),
-    onSuccess: () => qc.invalidateQueries({ queryKey: itemKeys.pantry }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: itemKeys.pantry });
+      qc.invalidateQueries({ queryKey: useSoonKey });
+    },
   });
 }
