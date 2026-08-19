@@ -238,6 +238,9 @@ function TemplatesMenu({
             placeholder="Save current list as..."
             value={name}
             onChange={(e) => setName(e.target.value)}
+            // The menu's roving-focus/typeahead keydown handling would
+            // otherwise swallow keystrokes meant for this input.
+            onKeyDown={(e) => e.stopPropagation()}
             className="h-7 text-xs"
           />
           <Button

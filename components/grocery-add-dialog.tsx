@@ -138,7 +138,10 @@ export function GroceryAddDialog({ open, onOpenChange }: { open: boolean; onOpen
             <Label>Store</Label>
             <Select value={storeId ?? "__any"} onValueChange={(v) => setStoreId(v === "__any" ? null : v)}>
               <SelectTrigger className="w-full">
-                <SelectValue />
+                {/* SelectValue only auto-resolves a label via an `items`
+                    map on the Select root; without one it renders the raw
+                    value, so "__any" needs an explicit label here. */}
+                <SelectValue>{(v: string) => (v === "__any" ? "Any" : stores?.find((s) => s._id === v)?.name ?? v)}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="__any">Any</SelectItem>
