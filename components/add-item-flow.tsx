@@ -111,10 +111,7 @@ export function AddItemFlow({
   }
 
   function confirmManual() {
-    setSelection({
-      kind: "manual",
-      manual: { name, category, defaultUnit: unit || "piece", defaultShelfLifeDays: shelfLifeDays, defaultLocation: location },
-    });
+    setSelection({ kind: "manual", manual: { name, category, defaultUnit: "piece", defaultShelfLifeDays: 7, defaultLocation: "pantry" } });
     setStep("details");
   }
 
@@ -122,7 +119,14 @@ export function AddItemFlow({
     if (!selection) return;
     setPending(true);
     try {
-      await onSubmit({ selection, name, unit, qty, location, shelfLifeDays, note: note || undefined, saveAsDefault });
+      // Manual items have no catalog defaults yet — the details step is the
+      // only place unit/location/shelf-life are asked, so reuse those same
+      // answers as the new item's defaults instead of asking again.
+      const finalSelection =
+        selection.kind === "manual"
+          ? { ...selection, manual: { ...selection.manual, defaultUnit: unit, defaultShelfLifeDays: shelfLifeDays, defaultLocation: location } }
+          : selection;
+      await onSubmit({ selection: finalSelection, name, unit, qty, location, shelfLifeDays, note: note || undefined, saveAsDefault });
       close();
     } finally {
       setPending(false);
@@ -199,36 +203,6 @@ export function AddItemFlow({
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             />
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            <div className="space-y-1.5">
-              <Label>Default unit</Label>
-              <UnitPicker value={unit} onChange={setUnit} presets={unitPresets?.units ?? []} onAddOther={addOtherUnit} />
-            </div>
-            <div className="space-y-1.5">
-              <Label>Shelf life (days)</Label>
-              <Input
-                type="number"
-                min={1}
-                value={shelfLifeDays}
-                onChange={(e) => setShelfLifeDays(Number(e.target.value))}
-              />
-            </div>
-          </div>
-          <div className="space-y-1.5">
-            <Label>Default location</Label>
-            <Select value={location} onValueChange={(v) => setLocation(v as Location)}>
-              <SelectTrigger className="w-full">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {LOCATIONS.map((loc) => (
-                  <SelectItem key={loc} value={loc}>
-                    {loc}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </div>
           <Button className="w-full" disabled={!name || !category} onClick={confirmManual}>
             Continue
