@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 import { Plus, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -83,6 +84,11 @@ export default function SettingsPage() {
       <section className="mb-8">
         <h2 className="mb-2 text-sm font-medium text-muted-foreground">Stores</h2>
         <StoresSection />
+      </section>
+
+      <section className="mb-8">
+        <h2 className="mb-2 text-sm font-medium text-muted-foreground">Appearance</h2>
+        <ThemeSection />
       </section>
 
       <section>
@@ -176,6 +182,28 @@ function StoresSection() {
           <Plus /> Add
         </Button>
       </div>
+    </div>
+  );
+}
+
+function ThemeSection() {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <div className="flex items-center justify-between rounded-lg border border-border/60 p-3">
+      <Label htmlFor="theme-select" className="text-sm font-medium">
+        Theme
+      </Label>
+      <Select value={theme ?? "system"} onValueChange={(v) => v && setTheme(v)}>
+        <SelectTrigger id="theme-select" className="w-32">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="light">Light</SelectItem>
+          <SelectItem value="dark">Dark</SelectItem>
+          <SelectItem value="system">System</SelectItem>
+        </SelectContent>
+      </Select>
     </div>
   );
 }

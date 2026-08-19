@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { FreshnessGauge } from "@/components/freshness-gauge";
 import { ConvertDialog } from "@/components/convert-dialog";
 import { useConsumeForm, useDeleteForm } from "@/lib/queries/items";
-import { daysLeft, freshnessState } from "@/lib/domain/freshness";
+import { daysLeft, freshnessState, FRESHNESS_GAUGE_CEILING_DAYS } from "@/lib/domain/freshness";
 import type { UserItemDTO, FormDTO } from "@/lib/types/dto";
 
 export type ItemCardMode = "track" | "clearOut";
@@ -69,8 +69,8 @@ function FormRow({
   const deleteForm = useDeleteForm();
 
   const remaining = daysLeft(new Date(form.addedDate), form.shelfLifeDays);
-  const state = freshnessState(remaining, form.shelfLifeDays);
-  const fraction = Math.max(0, remaining) / form.shelfLifeDays;
+  const state = freshnessState(remaining);
+  const fraction = Math.max(0, remaining) / FRESHNESS_GAUGE_CEILING_DAYS;
 
   return (
     <div className="flex items-center gap-3 rounded-lg border border-border/60 p-2.5">
