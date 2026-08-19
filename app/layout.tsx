@@ -44,7 +44,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <QueryProvider>
             <TooltipProvider>
               <GrainOverlay />
-              <div className="relative z-10 flex min-h-full flex-col">{children}</div>
+              {/* flex-1, not min-h-full: percentage heights need an
+                  ancestor with a *definite* `height`, and body only has
+                  `min-height` — flex-grow sidesteps that and reliably
+                  fills the viewport so the sidebar/content chain below
+                  can stretch to full height. */}
+              <div className="relative z-10 flex min-h-0 flex-1 flex-col">{children}</div>
               <Toaster />
             </TooltipProvider>
           </QueryProvider>

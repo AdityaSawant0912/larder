@@ -36,6 +36,7 @@ export function ItemCard({
           <FormRow
             key={form.id}
             itemId={item._id}
+            category={item.category}
             form={form}
             mode={mode}
             selected={selectedFormIds?.has(form.id) ?? false}
@@ -49,12 +50,14 @@ export function ItemCard({
 
 function FormRow({
   itemId,
+  category,
   form,
   mode,
   selected,
   onToggleSelect,
 }: {
   itemId: string;
+  category: string;
   form: FormDTO;
   mode: ItemCardMode;
   selected: boolean;
@@ -133,7 +136,7 @@ function FormRow({
             <Trash2 />
           </Button>
 
-          <ConvertDialog itemId={itemId} form={form} open={convertOpen} onOpenChange={setConvertOpen} />
+          <ConvertDialog itemId={itemId} category={category} form={form} open={convertOpen} onOpenChange={setConvertOpen} />
         </div>
       )}
     </div>

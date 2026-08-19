@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/select";
 import { useCatalogSearch } from "@/lib/queries/items";
 import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
+import { UnitPicker } from "@/components/unit-picker";
 import { LOCATIONS, type Location } from "@/lib/schemas/location";
 import type { ItemSelectionInput } from "@/lib/types/dto";
 
@@ -202,7 +203,7 @@ export function AddItemFlow({
           <div className="grid grid-cols-2 gap-2">
             <div className="space-y-1.5">
               <Label>Default unit</Label>
-              <Input value={unit} onChange={(e) => setUnit(e.target.value)} />
+              <UnitPicker value={unit} onChange={setUnit} presets={unitPresets?.units ?? []} onAddOther={addOtherUnit} />
             </div>
             <div className="space-y-1.5">
               <Label>Shelf life (days)</Label>
@@ -290,69 +291,5 @@ export function AddItemFlow({
         </div>
       )}
     </ResponsiveModal>
-  );
-}
-
-function UnitPicker({
-  value,
-  onChange,
-  presets,
-  onAddOther,
-}: {
-  value: string;
-  onChange: (v: string) => void;
-  presets: string[];
-  onAddOther: (v: string) => void;
-}) {
-  const [customOpen, setCustomOpen] = useState(false);
-  const [custom, setCustom] = useState("");
-
-  if (customOpen) {
-    return (
-      <div className="flex gap-1">
-        <Input
-          autoFocus
-          value={custom}
-          placeholder="unit"
-          onChange={(e) => setCustom(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && custom.trim()) {
-              onAddOther(custom.trim());
-              setCustomOpen(false);
-            }
-          }}
-        />
-        <Button
-          type="button"
-          size="sm"
-          disabled={!custom.trim()}
-          onClick={() => {
-            onAddOther(custom.trim());
-            setCustomOpen(false);
-          }}
-        >
-          Set
-        </Button>
-      </div>
-    );
-  }
-
-  return (
-    <Select
-      value={presets.includes(value) ? value : ""}
-      onValueChange={(v) => (v === "__other" ? setCustomOpen(true) : onChange(v ?? ""))}
-    >
-      <SelectTrigger className="w-full">
-        <SelectValue placeholder={value || "unit"} />
-      </SelectTrigger>
-      <SelectContent>
-        {presets.map((u) => (
-          <SelectItem key={u} value={u}>
-            {u}
-          </SelectItem>
-        ))}
-        <SelectItem value="__other">Other...</SelectItem>
-      </SelectContent>
-    </Select>
   );
 }

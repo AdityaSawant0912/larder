@@ -14,17 +14,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useConvertForm, type ConvertOutput } from "@/lib/queries/items";
+import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
+import { UnitPicker } from "@/components/unit-picker";
 import { LOCATIONS } from "@/lib/schemas/location";
 import type { FormDTO } from "@/lib/types/dto";
 
 // e.g. 1 whole watermelon -> 4 containers (docs/01-product-overview.md).
 export function ConvertDialog({
   itemId,
+  category,
   form,
   open,
   onOpenChange,
 }: {
   itemId: string;
+  category: string;
   form: FormDTO;
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -33,6 +37,13 @@ export function ConvertDialog({
     { unit: form.unit, qty: 1, location: form.location, shelfLifeDays: form.shelfLifeDays },
   ]);
   const convertForm = useConvertForm();
+  const { data: unitPresets } = useUnitPresets(category, itemId);
+  const learnUnit = useLearnUnit();
+
+  async function addOtherUnit(i: number, newUnit: string) {
+    updateOutput(i, { unit: newUnit });
+    if (category) await learnUnit.mutateAsync({ category, unit: newUnit });
+  }
 
   function updateOutput(i: number, patch: Partial<ConvertOutput>) {
     setOutputs((prev) => prev.map((o, idx) => (idx === i ? { ...o, ...patch } : o)));
@@ -80,7 +91,12 @@ export function ConvertDialog({
                 </div>
                 <div className="space-y-1">
                   <Label className="text-xs">Unit</Label>
-                  <Input value={output.unit} onChange={(e) => updateOutput(i, { unit: e.target.value })} />
+                  <UnitPicker
+                    value={output.unit}
+                    onChange={(v) => updateOutput(i, { unit: v })}
+                    presets={unitPresets?.units ?? []}
+                    onAddOther={(v) => addOtherUnit(i, v)}
+                  />
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-2">

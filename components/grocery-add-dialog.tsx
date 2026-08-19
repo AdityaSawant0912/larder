@@ -16,6 +16,8 @@ import {
 import { useCatalogSearch } from "@/lib/queries/items";
 import { useStores } from "@/lib/queries/stores";
 import { useAddGroceryItem } from "@/lib/queries/groceryList";
+import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
+import { UnitPicker } from "@/components/unit-picker";
 import type { GroceryAddSelectionInput } from "@/lib/types/dto";
 
 type Step = "search" | "details";
@@ -32,15 +34,21 @@ export function GroceryAddDialog({ open, onOpenChange }: { open: boolean; onOpen
 
   const [selection, setSelection] = useState<GroceryAddSelectionInput | null>(null);
   const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
   const [unit, setUnit] = useState("");
   const [qty, setQty] = useState(1);
   const [storeId, setStoreId] = useState<string | null>(null);
+
+  const itemIdForUnits = selection?.kind === "userItem" ? selection.userItemId : undefined;
+  const { data: unitPresets } = useUnitPresets(category, itemIdForUnits);
+  const learnUnit = useLearnUnit();
 
   function reset() {
     setStep("search");
     setQuery("");
     setSelection(null);
     setName("");
+    setCategory("");
     setUnit("");
     setQty(1);
     setStoreId(null);
@@ -57,6 +65,11 @@ export function GroceryAddDialog({ open, onOpenChange }: { open: boolean; onOpen
     close();
   }
 
+  async function addOtherUnit(newUnit: string) {
+    setUnit(newUnit);
+    if (category) await learnUnit.mutateAsync({ category, unit: newUnit });
+  }
+
   return (
     <ResponsiveModal open={open} onOpenChange={(o) => (o ? onOpenChange(o) : close())} title="Add to grocery list">
       {step === "search" && (
@@ -71,6 +84,7 @@ export function GroceryAddDialog({ open, onOpenChange }: { open: boolean; onOpen
                   onClick={() => {
                     setSelection({ kind: "freeText", name: query, category: "pantry" });
                     setName(query);
+                    setCategory("pantry");
                     setUnit("piece");
                     setStep("details");
                   }}
@@ -88,6 +102,7 @@ export function GroceryAddDialog({ open, onOpenChange }: { open: boolean; onOpen
                     onSelect={() => {
                       setSelection({ kind: "global", globalItemId: g._id });
                       setName(g.name);
+                      setCategory(g.category);
                       setUnit(g.defaultUnit);
                       setStep("details");
                     }}
@@ -107,6 +122,7 @@ export function GroceryAddDialog({ open, onOpenChange }: { open: boolean; onOpen
                     onSelect={() => {
                       setSelection({ kind: "userItem", userItemId: u._id });
                       setName(u.name);
+                      setCategory(u.category);
                       setUnit(u.defaultUnit);
                       setStep("details");
                     }}
@@ -131,7 +147,7 @@ export function GroceryAddDialog({ open, onOpenChange }: { open: boolean; onOpen
             </div>
             <div className="space-y-1.5">
               <Label>Unit</Label>
-              <Input value={unit} onChange={(e) => setUnit(e.target.value)} />
+              <UnitPicker value={unit} onChange={setUnit} presets={unitPresets?.units ?? []} onAddOther={addOtherUnit} />
             </div>
           </div>
           <div className="space-y-1.5">

@@ -13,6 +13,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { usePatchCatalogItem } from "@/lib/queries/items";
+import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
+import { UnitPicker } from "@/components/unit-picker";
 import { LOCATIONS, type Location } from "@/lib/schemas/location";
 import type { UserItemDTO, ThresholdDTO } from "@/lib/types/dto";
 
@@ -27,6 +29,14 @@ export function CatalogItemEditor({ item }: { item: UserItemDTO }) {
   const [defaultShelfLifeDays, setDefaultShelfLifeDays] = useState(item.defaultShelfLifeDays);
   const [defaultLocation, setDefaultLocation] = useState<Location>(item.defaultLocation);
   const [thresholds, setThresholds] = useState<ThresholdDTO[]>(item.thresholds);
+
+  const { data: unitPresets } = useUnitPresets(category, item._id);
+  const learnUnit = useLearnUnit();
+
+  async function addOtherUnit(newUnit: string) {
+    setDefaultUnit(newUnit);
+    if (category) await learnUnit.mutateAsync({ category, unit: newUnit });
+  }
 
   useEffect(() => {
     setName(item.name);
@@ -64,7 +74,7 @@ export function CatalogItemEditor({ item }: { item: UserItemDTO }) {
         </div>
         <div className="space-y-1.5">
           <Label>Default unit</Label>
-          <Input value={defaultUnit} onChange={(e) => setDefaultUnit(e.target.value)} />
+          <UnitPicker value={defaultUnit} onChange={setDefaultUnit} presets={unitPresets?.units ?? []} onAddOther={addOtherUnit} />
         </div>
         <div className="space-y-1.5">
           <Label>Default shelf life (days)</Label>
@@ -96,14 +106,19 @@ export function CatalogItemEditor({ item }: { item: UserItemDTO }) {
         <Label>Running-low thresholds</Label>
         {thresholds.map((t, i) => (
           <div key={i} className="flex items-center gap-2">
+            <div className="flex-1">
+              <UnitPicker
+                value={t.unit}
+                onChange={(v) => setThresholds((prev) => prev.map((row, idx) => (idx === i ? { ...row, unit: v } : row)))}
+                presets={unitPresets?.units ?? []}
+                onAddOther={async (v) => {
+                  setThresholds((prev) => prev.map((row, idx) => (idx === i ? { ...row, unit: v } : row)));
+                  if (category) await learnUnit.mutateAsync({ category, unit: v });
+                }}
+              />
+            </div>
             <Input
-              placeholder="unit"
-              value={t.unit}
-              onChange={(e) =>
-                setThresholds((prev) => prev.map((row, idx) => (idx === i ? { ...row, unit: e.target.value } : row)))
-              }
-            />
-            <Input
+              className="flex-1"
               type="number"
               min={0}
               placeholder="min qty"
