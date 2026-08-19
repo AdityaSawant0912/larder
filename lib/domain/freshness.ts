@@ -6,12 +6,16 @@ export function daysLeft(addedDate: Date, shelfLifeDays: number, now = new Date(
 
 export type FreshnessState = "fresh" | "warning" | "danger";
 
-// >33% of shelf life left = fresh, >10% = warning, else danger — matches
-// the sage/amber/coral three-state palette in docs/06-design-system.md.
-export function freshnessState(remaining: number, shelfLifeDays: number): FreshnessState {
-  if (shelfLifeDays <= 0) return "danger";
-  const ratio = remaining / shelfLifeDays;
-  if (ratio > 1 / 3) return "fresh";
-  if (ratio > 0.1) return "warning";
-  return "danger";
+// Absolute days left, not % of shelf life — a 1-day item must read as
+// urgent on day one, not "full and green" just because it's fresh relative
+// to its own (short) shelf life. Matches the sage/amber/coral palette in
+// docs/06-design-system.md.
+export function freshnessState(remaining: number): FreshnessState {
+  if (remaining <= 2) return "danger";
+  if (remaining <= 5) return "warning";
+  return "fresh";
 }
+
+// Bar fills relative to this many days out, capped — so bar length also
+// reads as absolute urgency, not shelf-life-relative progress.
+export const FRESHNESS_GAUGE_CEILING_DAYS = 7;
