@@ -10,6 +10,7 @@ import { ItemCard } from "@/components/item-card";
 import { ModeToggle, type HomeMode } from "@/components/mode-toggle";
 import { AddItemFlow, type AddItemDetails } from "@/components/add-item-flow";
 import { ExportSheet } from "@/components/export-sheet";
+import { FloatingAddButton } from "@/components/floating-add-button";
 import { useCurrentPantry, useResolveAndAddForm, useCommitRestock, useDiscardClearOut, type RestockQueueRow } from "@/lib/queries/items";
 import { LOCATIONS, type Location } from "@/lib/schemas/location";
 import { cn } from "@/lib/utils";
@@ -95,11 +96,8 @@ export default function HomePage() {
 
       {mode === "track" && (
         <>
-          <div className="mb-3 flex gap-2">
+          <div className="mb-3">
             <Input placeholder="Search your pantry..." value={query} onChange={(e) => setQuery(e.target.value)} />
-            <Button onClick={() => setAddOpen(true)}>
-              <Plus /> Add
-            </Button>
           </div>
           <div className="mb-4 flex gap-2 overflow-x-auto pb-1">
             <FilterChip active={locationFilter === "all"} onClick={() => setLocationFilter("all")}>
@@ -131,6 +129,7 @@ export default function HomePage() {
           )}
 
           <AddItemFlow open={addOpen} onOpenChange={setAddOpen} onSubmit={handleTrackAdd} />
+          <FloatingAddButton onClick={() => setAddOpen(true)} />
         </>
       )}
 
