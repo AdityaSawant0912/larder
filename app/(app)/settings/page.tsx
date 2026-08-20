@@ -87,7 +87,7 @@ function AccountSection() {
         <p className="text-xs text-muted-foreground">{session?.user.email}</p>
       </div>
       <Button
-        variant="outline"
+        variant="destructive"
         onClick={async () => {
           await authClient.signOut();
           router.push("/login");

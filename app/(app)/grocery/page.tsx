@@ -141,7 +141,7 @@ export default function GroceryListPage() {
                     </p>
                   </div>
                   {listMode === "checklist" && (
-                    <Button variant="ghost" size="icon-xs" aria-label="Remove" onClick={() => deleteItem.mutate(item._id)}>
+                    <Button variant="destructive" size="icon-xs" aria-label="Remove" onClick={() => deleteItem.mutate(item._id)}>
                       <Trash2 />
                     </Button>
                   )}

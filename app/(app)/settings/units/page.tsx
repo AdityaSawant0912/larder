@@ -39,7 +39,7 @@ export default function UnitsSettingsPage() {
                 <button
                   aria-label={`Remove ${u}`}
                   onClick={() => forgetUnit.mutate({ category: p.category, unit: u })}
-                  className="hover:text-foreground"
+                  className="hover:text-danger"
                 >
                   <X className="size-3" />
                 </button>

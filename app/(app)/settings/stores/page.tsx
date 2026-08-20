@@ -24,7 +24,7 @@ export default function StoresSettingsPage() {
         {stores?.map((s) => (
           <div key={s._id} className="flex items-center justify-between rounded-lg border border-border/60 px-3 py-2 text-sm">
             {s.name}
-            <Button variant="ghost" size="icon-xs" aria-label="Delete store" onClick={() => deleteStore.mutate(s._id)}>
+            <Button variant="destructive" size="icon-xs" aria-label="Delete store" onClick={() => deleteStore.mutate(s._id)}>
               <Trash2 />
             </Button>
           </div>

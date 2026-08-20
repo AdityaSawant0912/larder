@@ -66,7 +66,7 @@ export function CatalogItemEditor({ item, onDeleted }: { item: UserItemDTO; onDe
       <div className="flex items-center justify-between gap-3">
         <p className="font-display text-3xl">{item.name}</p>
         <Button
-          variant="ghost"
+          variant="destructive"
           size="icon-sm"
           aria-label="Delete item"
           disabled={deleteItem.isPending}
