@@ -23,7 +23,7 @@ export default function SettingsPage() {
       <section className="mb-8">
         <h2 className="mb-2 text-sm font-medium text-muted-foreground">Manage</h2>
         <div className="space-y-2">
-          <SettingsLink href="/settings/catalog" label="Your Catalog" />
+          <SettingsLink href="/settings/catalog" label="Catalog" />
           <SettingsLink href="/settings/stores" label="Stores" />
           <SettingsLink href="/settings/units" label="Units" />
         </div>
