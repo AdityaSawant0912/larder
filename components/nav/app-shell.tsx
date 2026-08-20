@@ -22,7 +22,10 @@ export function AppShell({
   const pathname = usePathname();
 
   return (
-    <div className="flex min-h-0 flex-1">
+    // Sidebar + content centered together as one unit (max-w-5xl content +
+    // w-56 sidebar) instead of the sidebar pinned to the viewport edge with
+    // content re-centered in whatever's left — that gap was the complaint.
+    <div className="mx-auto flex min-h-0 w-full max-w-[78rem] flex-1">
       {/* Desktop: persistent left sidebar (docs/08-screens-desktop.md). */}
       <aside className="hidden w-56 shrink-0 flex-col border-r border-border bg-card/60 p-4 md:flex">
         <div className="mb-6 font-display text-3xl">Larder</div>
