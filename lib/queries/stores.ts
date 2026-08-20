@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { apiGet, apiPost } from "@/lib/api/client";
+import { apiGet, apiPost, apiDelete } from "@/lib/api/client";
 import type { UserStoreDTO, StoreSearchResultDTO } from "@/lib/types/dto";
 
 export const storeKeys = {
@@ -31,6 +31,14 @@ export function useAddStore() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (input: AddStoreInput) => apiPost<UserStoreDTO>("/api/stores", input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: storeKeys.list }),
+  });
+}
+
+export function useDeleteStore() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (id: string) => apiDelete(`/api/stores/${id}`),
     onSuccess: () => qc.invalidateQueries({ queryKey: storeKeys.list }),
   });
 }

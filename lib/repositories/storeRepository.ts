@@ -61,4 +61,9 @@ export const userStoreRepository = {
     await col.insertOne(doc);
     return userStoreSchema.parse(doc);
   },
+
+  async delete(userId: ObjectId, id: ObjectId): Promise<void> {
+    const col = await userStoresCollection();
+    await col.deleteOne({ _id: id, userId });
+  },
 };

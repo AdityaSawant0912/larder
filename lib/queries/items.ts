@@ -81,6 +81,17 @@ export function usePatchCatalogItem() {
   });
 }
 
+export function useDeleteCatalogItem() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (id: string) => apiDelete(`/api/items/${id}`),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: itemKeys.catalog });
+      qc.invalidateQueries({ queryKey: itemKeys.pantry });
+    },
+  });
+}
+
 export interface ResolveAndAddFormInput {
   selection: ItemSelectionInput;
   unit: string;

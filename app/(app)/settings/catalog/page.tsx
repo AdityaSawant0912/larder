@@ -63,7 +63,7 @@ export default function CatalogSettingsPage() {
         {/* Desktop: master-detail (docs/08). */}
         {isDesktop && (
           <div className="rounded-lg border border-border/60 p-4">
-            {selected ? <CatalogItemEditor item={selected} /> : <p className="text-sm text-muted-foreground">Select an item to edit.</p>}
+            {selected ? <CatalogItemEditor item={selected} onDeleted={() => setSelectedId(null)} /> : <p className="text-sm text-muted-foreground">Select an item to edit.</p>}
           </div>
         )}
       </div>
@@ -75,7 +75,7 @@ export default function CatalogSettingsPage() {
             <SheetHeader>
               <SheetTitle>Edit item</SheetTitle>
             </SheetHeader>
-            <div className="px-4 pb-4">{selected && <CatalogItemEditor item={selected} />}</div>
+            <div className="px-4 pb-4">{selected && <CatalogItemEditor item={selected} onDeleted={() => setSelectedId(null)} />}</div>
           </SheetContent>
         </Sheet>
       )}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { apiGet, apiPost } from "@/lib/api/client";
+import { apiGet, apiPost, apiDelete } from "@/lib/api/client";
 import type { UserUnitPresetDTO } from "@/lib/types/dto";
 
 export const unitPresetKeys = {
@@ -37,6 +37,19 @@ export function useLearnUnit() {
   return useMutation({
     mutationFn: ({ category, unit }: { category: string; unit: string }) =>
       apiPost("/api/unit-presets", { category, unit }),
+    onSuccess: (_data, { category }) => {
+      qc.invalidateQueries({ queryKey: ["unitPresets", category] });
+      qc.invalidateQueries({ queryKey: unitPresetKeys.list });
+    },
+  });
+}
+
+// Settings > User Units delete.
+export function useForgetUnit() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ category, unit }: { category: string; unit: string }) =>
+      apiDelete(`/api/unit-presets?category=${encodeURIComponent(category)}&unit=${encodeURIComponent(unit)}`),
     onSuccess: (_data, { category }) => {
       qc.invalidateQueries({ queryKey: ["unitPresets", category] });
       qc.invalidateQueries({ queryKey: unitPresetKeys.list });

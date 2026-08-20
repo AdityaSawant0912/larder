@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, Plus } from "lucide-react";
+import { ChevronLeft, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useStores, useAddStore } from "@/lib/queries/stores";
+import { useStores, useAddStore, useDeleteStore } from "@/lib/queries/stores";
 
 export default function StoresSettingsPage() {
   const { data: stores } = useStores();
   const addStore = useAddStore();
+  const deleteStore = useDeleteStore();
   const [name, setName] = useState("");
 
   return (
@@ -21,8 +22,11 @@ export default function StoresSettingsPage() {
 
       <div className="space-y-2">
         {stores?.map((s) => (
-          <div key={s._id} className="rounded-lg border border-border/60 px-3 py-2 text-sm">
+          <div key={s._id} className="flex items-center justify-between rounded-lg border border-border/60 px-3 py-2 text-sm">
             {s.name}
+            <Button variant="ghost" size="icon-xs" aria-label="Delete store" onClick={() => deleteStore.mutate(s._id)}>
+              <Trash2 />
+            </Button>
           </div>
         ))}
         {stores?.length === 0 && <p className="py-4 text-center text-sm text-muted-foreground">No stores yet.</p>}

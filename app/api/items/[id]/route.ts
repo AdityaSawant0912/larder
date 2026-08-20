@@ -49,3 +49,16 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     return errorResponse(err);
   }
 }
+
+// Settings/Catalog "delete" — removes the item identity outright, live
+// stock and all (unlike consuming a form to zero, which keeps the item).
+export async function DELETE(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  try {
+    const userId = new ObjectId(await requireUserId());
+    const { id } = await params;
+    await userItemRepository.delete(userId, new ObjectId(id));
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    return errorResponse(err);
+  }
+}

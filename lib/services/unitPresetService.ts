@@ -44,6 +44,10 @@ export async function learnUnit(userId: ObjectId, category: string, unit: string
   await userUnitPresetRepository.learnUnit(userId, category, unit);
 }
 
+export async function forgetUnit(userId: ObjectId, category: string, unit: string): Promise<void> {
+  await userUnitPresetRepository.removeUnit(userId, category, unit);
+}
+
 // Settings > User Units — every category this user has taught a custom
 // unit to, via "Other ->" or the settings screen itself.
 export async function listLearnedUnits(userId: ObjectId) {

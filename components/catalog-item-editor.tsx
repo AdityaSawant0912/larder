@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { usePatchCatalogItem } from "@/lib/queries/items";
+import { usePatchCatalogItem, useDeleteCatalogItem } from "@/lib/queries/items";
 import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
 import { UnitPicker } from "@/components/unit-picker";
 import { CATEGORIES } from "@/lib/constants/unitPresets";
@@ -21,8 +21,9 @@ import type { UserItemDTO, ThresholdDTO } from "@/lib/types/dto";
 
 // Settings is the one screen where editing a default doesn't need the
 // "save as default" checkbox — editing IS the point (docs/07).
-export function CatalogItemEditor({ item }: { item: UserItemDTO }) {
+export function CatalogItemEditor({ item, onDeleted }: { item: UserItemDTO; onDeleted?: () => void }) {
   const patch = usePatchCatalogItem();
+  const deleteItem = useDeleteCatalogItem();
 
   const [name, setName] = useState(item.name);
   const [category, setCategory] = useState(item.category);
@@ -62,7 +63,21 @@ export function CatalogItemEditor({ item }: { item: UserItemDTO }) {
 
   return (
     <div className="space-y-4">
-      <p className="font-display text-3xl">{item.name}</p>
+      <div className="flex items-center justify-between gap-3">
+        <p className="font-display text-3xl">{item.name}</p>
+        <Button
+          variant="ghost"
+          size="icon-sm"
+          aria-label="Delete item"
+          disabled={deleteItem.isPending}
+          onClick={async () => {
+            await deleteItem.mutateAsync(item._id);
+            onDeleted?.();
+          }}
+        >
+          <Trash2 />
+        </Button>
+      </div>
 
       <div className="grid grid-cols-2 gap-3">
         <div className="space-y-1.5">
