@@ -11,6 +11,8 @@ import {
   type Threshold,
 } from "@/lib/schemas/userItem";
 
+const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
 export const userItemRepository = {
   async findAllForUser(userId: ObjectId): Promise<UserItem[]> {
     const col = await userItemsCollection();
@@ -72,6 +74,9 @@ export const userItemRepository = {
     );
   },
 
+  // Adding the same unit/location/shelf-life batch again today bumps the
+  // existing form's qty instead of creating a duplicate — different days
+  // stay separate forms since freshness is tracked per addedDate (docs/02).
   async addForm(
     userId: ObjectId,
     itemId: ObjectId,
@@ -80,6 +85,26 @@ export const userItemRepository = {
   ): Promise<Form> {
     const col = await userItemsCollection();
     const parsed = formSchema.parse({ ...form, id: new ObjectId() });
+
+    const doc = await col.findOne({ _id: itemId, userId }, { session });
+    const existing = doc?.forms.find(
+      (f) =>
+        f.unit === parsed.unit &&
+        f.location === parsed.location &&
+        f.shelfLifeDays === parsed.shelfLifeDays &&
+        Math.floor((parsed.addedDate.getTime() - f.addedDate.getTime()) / MS_PER_DAY) === 0
+    );
+
+    if (existing) {
+      const merged = { ...existing, qty: existing.qty + parsed.qty };
+      await col.updateOne(
+        { _id: itemId, userId, "forms.id": existing.id },
+        { $set: { "forms.$.qty": merged.qty, updatedAt: new Date() } },
+        { session }
+      );
+      return merged;
+    }
+
     await col.updateOne(
       { _id: itemId, userId },
       { $push: { forms: parsed }, $set: { updatedAt: new Date() } },
