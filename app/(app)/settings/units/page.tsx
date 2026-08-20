@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, Plus } from "lucide-react";
+import { ChevronLeft, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -12,12 +12,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useAllUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
+import { useAllUnitPresets, useLearnUnit, useForgetUnit } from "@/lib/queries/unitPresets";
 import { CATEGORIES } from "@/lib/constants/unitPresets";
 
 export default function UnitsSettingsPage() {
   const { data: presets } = useAllUnitPresets();
   const learnUnit = useLearnUnit();
+  const forgetUnit = useForgetUnit();
   const [category, setCategory] = useState("");
   const [unit, setUnit] = useState("");
 
@@ -30,9 +31,20 @@ export default function UnitsSettingsPage() {
 
       <div className="space-y-2">
         {presets?.map((p) => (
-          <div key={p._id} className="rounded-lg border border-border/60 px-3 py-2 text-sm">
+          <div key={p._id} className="flex flex-wrap items-center gap-1.5 rounded-lg border border-border/60 px-3 py-2 text-sm">
             <span className="font-medium">{p.category}</span>
-            <span className="ml-2 text-muted-foreground">{p.units.join(", ")}</span>
+            {p.units.map((u) => (
+              <span key={u} className="flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground">
+                {u}
+                <button
+                  aria-label={`Remove ${u}`}
+                  onClick={() => forgetUnit.mutate({ category: p.category, unit: u })}
+                  className="hover:text-foreground"
+                >
+                  <X className="size-3" />
+                </button>
+              </span>
+            ))}
           </div>
         ))}
         {presets?.length === 0 && <p className="py-4 text-center text-sm text-muted-foreground">No custom units yet.</p>}

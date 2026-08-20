@@ -74,6 +74,11 @@ export const userItemRepository = {
     );
   },
 
+  async delete(userId: ObjectId, id: ObjectId): Promise<void> {
+    const col = await userItemsCollection();
+    await col.deleteOne({ _id: id, userId });
+  },
+
   // Adding the same unit/location/shelf-life batch again today bumps the
   // existing form's qty instead of creating a duplicate — different days
   // stay separate forms since freshness is tracked per addedDate (docs/02).

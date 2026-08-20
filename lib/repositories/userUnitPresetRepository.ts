@@ -25,4 +25,12 @@ export const userUnitPresetRepository = {
       { upsert: true }
     );
   },
+
+  // Settings > User Units delete — drops the category doc entirely once
+  // its last learned unit is removed rather than leaving an empty row.
+  async removeUnit(userId: ObjectId, category: string, unit: string): Promise<void> {
+    const col = await userUnitPresetsCollection();
+    await col.updateOne({ userId, category }, { $pull: { units: unit } });
+    await col.deleteOne({ userId, category, units: { $size: 0 } });
+  },
 };
