@@ -45,6 +45,19 @@ export async function addItem(userId: ObjectId, input: AddGroceryItemInput): Pro
     category = input.selection.category;
   }
 
+  const existing = await groceryListRepository.findUnmergedMatch(userId, {
+    userItemId,
+    name,
+    storeId: input.storeId,
+    unit: input.unit,
+  });
+
+  if (existing) {
+    const qty = existing.qty + input.qty;
+    await groceryListRepository.update(userId, existing._id, { qty });
+    return { ...existing, qty };
+  }
+
   return groceryListRepository.create({
     userId,
     userItemId,
