@@ -3,14 +3,15 @@ import { ObjectId } from "mongodb";
 import { z } from "zod";
 import { requireUserId } from "@/lib/auth/session";
 import { errorResponse } from "@/lib/api/respond";
-import { unitPickerSource, learnUnit } from "@/lib/services/unitPresetService";
+import { unitPickerSource, learnUnit, listLearnedUnits } from "@/lib/services/unitPresetService";
 
-// GET /api/unit-presets?category=produce&itemId=...
+// GET /api/unit-presets?category=produce&itemId=...  -> picker source for one category
+// GET /api/unit-presets                              -> all of the user's learned units (Settings > User Units)
 export async function GET(req: NextRequest) {
   try {
     const userId = new ObjectId(await requireUserId());
     const category = req.nextUrl.searchParams.get("category");
-    if (!category) return NextResponse.json({ error: "category is required" }, { status: 400 });
+    if (!category) return NextResponse.json(await listLearnedUnits(userId));
     const itemIdParam = req.nextUrl.searchParams.get("itemId");
     const units = await unitPickerSource(
       userId,

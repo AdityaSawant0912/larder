@@ -56,6 +56,12 @@ export default function GroceryListPage() {
     selectedStore === "any" ? true : item.storeId === selectedStore || item.storeId === null
   );
 
+  // Only chip stores that actually have something on this list — the
+  // user's full store list can grow past what's relevant here (global
+  // stores included), so don't let the filter row grow unbounded.
+  const storeIdsWithItems = new Set((items ?? []).map((item) => item.storeId).filter((id): id is string => id !== null));
+  const storesWithItems = (stores ?? []).filter((s) => storeIdsWithItems.has(s._id));
+
   function toggleReviewSelect(id: string) {
     setReviewSelection((prev) => {
       const next = new Set(prev);
@@ -105,7 +111,7 @@ export default function GroceryListPage() {
           <StoreChip active={selectedStore === "any"} onClick={() => setSelectedStore("any")}>
             Any
           </StoreChip>
-          {stores?.map((s) => (
+          {storesWithItems.map((s) => (
             <StoreChip key={s._id} active={selectedStore === s._id} onClick={() => setSelectedStore(s._id)}>
               {s.name}
             </StoreChip>

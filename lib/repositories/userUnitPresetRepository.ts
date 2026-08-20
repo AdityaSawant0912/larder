@@ -9,6 +9,12 @@ export const userUnitPresetRepository = {
     return doc ? userUnitPresetSchema.parse(doc) : null;
   },
 
+  async findAllForUser(userId: ObjectId): Promise<UserUnitPreset[]> {
+    const col = await userUnitPresetsCollection();
+    const docs = await col.find({ userId }).toArray();
+    return docs.map((d) => userUnitPresetSchema.parse(d));
+  },
+
   // Learns a new unit typed via "Other →" — upserts and $addToSet so
   // repeats don't duplicate.
   async learnUnit(userId: ObjectId, category: string, unit: string): Promise<void> {
