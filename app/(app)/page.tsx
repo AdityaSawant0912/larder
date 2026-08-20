@@ -96,8 +96,11 @@ export default function HomePage() {
 
       {mode === "track" && (
         <>
-          <div className="mb-3">
+          <div className="mb-3 flex gap-2">
             <Input placeholder="Search your pantry..." value={query} onChange={(e) => setQuery(e.target.value)} />
+            <Button className="hidden md:inline-flex" onClick={() => setAddOpen(true)}>
+              <Plus /> Add
+            </Button>
           </div>
           <div className="mb-4 flex gap-2 overflow-x-auto pb-1">
             <FilterChip active={locationFilter === "all"} onClick={() => setLocationFilter("all")}>
