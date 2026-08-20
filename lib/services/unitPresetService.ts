@@ -43,3 +43,9 @@ export async function unitPickerSource(
 export async function learnUnit(userId: ObjectId, category: string, unit: string): Promise<void> {
   await userUnitPresetRepository.learnUnit(userId, category, unit);
 }
+
+// Settings > User Units — every category this user has taught a custom
+// unit to, via "Other ->" or the settings screen itself.
+export async function listLearnedUnits(userId: ObjectId) {
+  return userUnitPresetRepository.findAllForUser(userId);
+}

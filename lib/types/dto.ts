@@ -66,6 +66,13 @@ export interface StoreSearchResultDTO {
   userMatches: UserStoreDTO[];
 }
 
+export interface UserUnitPresetDTO {
+  _id: string;
+  userId: string;
+  category: string;
+  units: string[];
+}
+
 export interface GroceryListItemDTO {
   _id: string;
   userId: string;

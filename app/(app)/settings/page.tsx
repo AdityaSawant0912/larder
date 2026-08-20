@@ -23,6 +23,7 @@ export default function SettingsPage() {
       <section className="mb-8 space-y-2">
         <SettingsLink href="/settings/catalog" label="User Catalog" />
         <SettingsLink href="/settings/stores" label="Stores" />
+        <SettingsLink href="/settings/units" label="User Units" />
       </section>
 
       <section className="mb-8">
