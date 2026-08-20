@@ -15,6 +15,7 @@ import {
 import { usePatchCatalogItem } from "@/lib/queries/items";
 import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
 import { UnitPicker } from "@/components/unit-picker";
+import { CATEGORIES } from "@/lib/constants/unitPresets";
 import { LOCATIONS, type Location } from "@/lib/schemas/location";
 import type { UserItemDTO, ThresholdDTO } from "@/lib/types/dto";
 
@@ -70,7 +71,18 @@ export function CatalogItemEditor({ item }: { item: UserItemDTO }) {
         </div>
         <div className="space-y-1.5">
           <Label>Category</Label>
-          <Input value={category} onChange={(e) => setCategory(e.target.value)} />
+          <Select value={category} onValueChange={(v) => setCategory(v ?? "")}>
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="Select a category" />
+            </SelectTrigger>
+            <SelectContent>
+              {CATEGORIES.map((cat) => (
+                <SelectItem key={cat} value={cat}>
+                  {cat}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
         <div className="space-y-1.5">
           <Label>Default unit</Label>

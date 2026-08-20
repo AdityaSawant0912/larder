@@ -15,6 +15,8 @@ import {
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { CatalogItemEditor } from "@/components/catalog-item-editor";
 import { useAllCatalogItems, useCreateCatalogItem } from "@/lib/queries/items";
+import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
+import { UnitPicker } from "@/components/unit-picker";
 import { useIsDesktop } from "@/lib/hooks/useMediaQuery";
 import { CATEGORIES } from "@/lib/constants/unitPresets";
 import { LOCATIONS, type Location } from "@/lib/schemas/location";
@@ -90,6 +92,14 @@ function NewCatalogItemForm() {
   const [defaultShelfLifeDays, setDefaultShelfLifeDays] = useState(7);
   const [defaultLocation, setDefaultLocation] = useState<Location>("pantry");
 
+  const { data: unitPresets } = useUnitPresets(category);
+  const learnUnit = useLearnUnit();
+
+  async function addOtherUnit(newUnit: string) {
+    setDefaultUnit(newUnit);
+    if (category) await learnUnit.mutateAsync({ category, unit: newUnit });
+  }
+
   if (!open) {
     return (
       <Button variant="outline" size="sm" onClick={() => setOpen(true)}>
@@ -114,7 +124,7 @@ function NewCatalogItemForm() {
         </SelectContent>
       </Select>
       <div className="grid grid-cols-2 gap-2">
-        <Input placeholder="Unit" value={defaultUnit} onChange={(e) => setDefaultUnit(e.target.value)} />
+        <UnitPicker value={defaultUnit} onChange={setDefaultUnit} presets={unitPresets?.units ?? []} onAddOther={addOtherUnit} />
         <Input
           type="number"
           min={1}
