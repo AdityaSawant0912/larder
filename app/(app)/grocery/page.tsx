@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Trash2 } from "lucide-react";
+import { Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -101,6 +101,9 @@ export default function GroceryListPage() {
               })
             }
           />
+          <Button className="hidden md:inline-flex" onClick={() => setAddOpen(true)}>
+            <Plus /> Add
+          </Button>
         </div>
       </div>
 
