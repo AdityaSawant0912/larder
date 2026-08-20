@@ -146,7 +146,12 @@ function UseUpButton({ row }: { row: UseSoonRowDTO }) {
     <Popover>
       <PopoverTrigger
         render={
-          <Button variant="ghost" size="icon-sm" aria-label="Use up">
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            aria-label="Use up"
+            className="text-fresh hover:bg-fresh/10 hover:text-fresh dark:hover:bg-fresh/20"
+          >
             <CookingPot />
           </Button>
         }
