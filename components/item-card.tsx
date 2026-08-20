@@ -11,6 +11,7 @@ import { FreshnessGauge } from "@/components/freshness-gauge";
 import { ConvertDialog } from "@/components/convert-dialog";
 import { useConsumeForm, useDeleteForm } from "@/lib/queries/items";
 import { daysLeft, freshnessState, FRESHNESS_GAUGE_CEILING_DAYS } from "@/lib/domain/freshness";
+import { cn } from "@/lib/utils";
 import type { UserItemDTO, FormDTO } from "@/lib/types/dto";
 
 export type ItemCardMode = "track" | "clearOut";
@@ -83,7 +84,12 @@ function FormRow({
           <span className="font-mono text-sm">
             {form.qty} {form.unit}
           </span>
-          <span className="font-mono text-xs text-muted-foreground">
+          <span
+            className={cn(
+              "font-mono text-xs",
+              state === "danger" ? "text-danger" : state === "warning" ? "text-warning" : "text-muted-foreground"
+            )}
+          >
             {remaining >= 0 ? `${remaining}d left` : `${Math.abs(remaining)}d over`}
           </span>
         </div>
@@ -127,7 +133,7 @@ function FormRow({
           </Button>
 
           <Button
-            variant="ghost"
+            variant="destructive"
             size="icon-sm"
             aria-label="Delete"
             disabled={deleteForm.isPending}

@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/table";
 import { useUseSoon } from "@/lib/queries/useSoon";
 import { useConsumeForm } from "@/lib/queries/items";
+import { freshnessState } from "@/lib/domain/freshness";
 import { cn } from "@/lib/utils";
 import type { UseSoonRowDTO } from "@/lib/types/dto";
 
@@ -80,7 +81,13 @@ export default function UseSoonPage() {
                       {row.qty} {row.unit}
                     </TableCell>
                     <TableCell className="capitalize">{row.location}</TableCell>
-                    <TableCell className={cn("font-mono", row.daysLeft < 0 && "text-danger")}>
+                    <TableCell
+                      className={cn(
+                        "font-mono",
+                        freshnessState(row.daysLeft) === "danger" && "text-danger",
+                        freshnessState(row.daysLeft) === "warning" && "text-warning"
+                      )}
+                    >
                       {row.daysLeft >= 0 ? `${row.daysLeft}d` : `${Math.abs(row.daysLeft)}d over`}
                     </TableCell>
                     <TableCell>
@@ -117,7 +124,13 @@ function UseSoonRow({ row }: { row: UseSoonRowDTO }) {
           {row.qty} {row.unit} · {row.location}
         </p>
       </div>
-      <span className={cn("font-mono text-xs", row.daysLeft < 0 && "text-danger")}>
+      <span
+        className={cn(
+          "font-mono text-xs",
+          freshnessState(row.daysLeft) === "danger" && "text-danger",
+          freshnessState(row.daysLeft) === "warning" && "text-warning"
+        )}
+      >
         {row.daysLeft >= 0 ? `${row.daysLeft}d left` : `${Math.abs(row.daysLeft)}d over`}
       </span>
       <UseUpButton row={row} />
