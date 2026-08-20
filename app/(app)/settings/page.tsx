@@ -20,10 +20,13 @@ export default function SettingsPage() {
     <div className="mx-auto max-w-5xl px-4 py-4 md:py-6">
       <h1 className="mb-4 font-display text-3xl">Settings</h1>
 
-      <section className="mb-8 space-y-2">
-        <SettingsLink href="/settings/catalog" label="Your Catalog" />
-        <SettingsLink href="/settings/stores" label="Stores" />
-        <SettingsLink href="/settings/units" label="User Units" />
+      <section className="mb-8">
+        <h2 className="mb-2 text-sm font-medium text-muted-foreground">Manage</h2>
+        <div className="space-y-2">
+          <SettingsLink href="/settings/catalog" label="Your Catalog" />
+          <SettingsLink href="/settings/stores" label="Stores" />
+          <SettingsLink href="/settings/units" label="Units" />
+        </div>
       </section>
 
       <section className="mb-8">

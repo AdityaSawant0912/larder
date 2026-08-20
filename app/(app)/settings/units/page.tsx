@@ -27,7 +27,7 @@ export default function UnitsSettingsPage() {
       <Link href="/settings" className="mb-2 flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ChevronLeft className="size-4" /> Settings
       </Link>
-      <h1 className="mb-4 font-display text-3xl">User Units</h1>
+      <h1 className="mb-4 font-display text-3xl">Units</h1>
 
       <div className="space-y-2">
         {presets?.map((p) => (
