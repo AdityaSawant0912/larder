@@ -28,7 +28,7 @@ export function AppShell({
         <div className="mb-6 font-display text-3xl">Larder</div>
         <nav className="flex flex-1 flex-col gap-1">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
-            const active = pathname === href;
+            const active = pathname === href || pathname.startsWith(`${href}/`);
             return (
               <Link
                 key={href}
@@ -55,7 +55,7 @@ export function AppShell({
         {/* Mobile: bottom tab bar, 4 slots (docs/07-screens-mobile.md). */}
         <nav className="fixed inset-x-0 bottom-0 z-20 flex border-t border-border bg-card/95 backdrop-blur-sm md:hidden">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
-            const active = pathname === href;
+            const active = pathname === href || pathname.startsWith(`${href}/`);
             return (
               <Link
                 key={href}
