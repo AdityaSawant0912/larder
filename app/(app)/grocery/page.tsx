@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Trash2 } from "lucide-react";
+import { Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -22,6 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { GroceryAddDialog } from "@/components/grocery-add-dialog";
+import { FloatingAddButton } from "@/components/floating-add-button";
 import {
   useGroceryList,
   useToggleGroceryChecked,
@@ -100,9 +101,6 @@ export default function GroceryListPage() {
               })
             }
           />
-          <Button onClick={() => setAddOpen(true)}>
-            <Plus /> Add
-          </Button>
         </div>
       </div>
 
@@ -200,6 +198,7 @@ export default function GroceryListPage() {
       </div>
 
       <GroceryAddDialog open={addOpen} onOpenChange={setAddOpen} />
+      <FloatingAddButton onClick={() => setAddOpen(true)} />
     </div>
   );
 }
