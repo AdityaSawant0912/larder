@@ -21,7 +21,7 @@ export default function SettingsPage() {
       <h1 className="mb-4 font-display text-3xl">Settings</h1>
 
       <section className="mb-8 space-y-2">
-        <SettingsLink href="/settings/catalog" label="User Catalog" />
+        <SettingsLink href="/settings/catalog" label="Your Catalog" />
         <SettingsLink href="/settings/stores" label="Stores" />
         <SettingsLink href="/settings/units" label="User Units" />
       </section>

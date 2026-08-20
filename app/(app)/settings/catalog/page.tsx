@@ -36,7 +36,7 @@ export default function CatalogSettingsPage() {
       <Link href="/settings" className="mb-2 flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ChevronLeft className="size-4" /> Settings
       </Link>
-      <h1 className="mb-4 font-display text-3xl">User Catalog</h1>
+      <h1 className="mb-4 font-display text-3xl">Your Catalog</h1>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="space-y-2">
