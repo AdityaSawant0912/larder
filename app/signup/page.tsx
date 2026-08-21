@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { signUp } from "@/lib/auth/client";
+import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -26,7 +27,7 @@ export default function SignupPage() {
       setError(signUpError.message ?? "Couldn't create your account.");
       return;
     }
-    router.push("/");
+    router.push("/app");
     router.refresh();
   }
 
@@ -34,7 +35,7 @@ export default function SignupPage() {
     <main className="flex flex-1 items-center justify-center px-4 py-16">
       <div className="w-full max-w-sm space-y-6">
         <div className="space-y-1 text-center">
-          <h1 className="font-display text-4xl">Larder</h1>
+          <Logo className="justify-center" markClassName="size-8" />
           <p className="text-sm text-muted-foreground">Track what&apos;s in your pantry.</p>
         </div>
 

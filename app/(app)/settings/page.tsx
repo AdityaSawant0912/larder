@@ -14,8 +14,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { authClient, useSession } from "@/lib/auth/client";
+import { DEBUG_EMAIL } from "@/lib/constants/debug";
 
 export default function SettingsPage() {
+  const { data: session } = useSession();
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-4 md:py-6">
       <h1 className="mb-4 font-display text-3xl">Settings</h1>
@@ -34,10 +37,19 @@ export default function SettingsPage() {
         <ThemeSection />
       </section>
 
-      <section>
+      <section className="mb-8">
         <h2 className="mb-2 text-sm font-medium text-muted-foreground">Account</h2>
         <AccountSection />
       </section>
+
+      {session?.user.email === DEBUG_EMAIL && (
+        <section>
+          <h2 className="mb-2 text-sm font-medium text-muted-foreground">Developer</h2>
+          <div className="space-y-2">
+            <SettingsLink href="/settings/debug" label="Debug" />
+          </div>
+        </section>
+      )}
     </div>
   );
 }

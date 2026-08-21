@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .fill { fill: #3e6c82; }
+    .cut { fill: #f1f0ec; }
+    @media (prefers-color-scheme: dark) {
+      .fill { fill: #9fc3d9; }
+      .cut { fill: #1e2420; }
+    }
+  </style>
+  <rect class="fill" x="7.5" y="2" width="9" height="2.75" rx="1.2" />
+  <rect class="fill" x="8.75" y="4.25" width="6.5" height="2" />
+  <rect class="fill" x="4" y="5.75" width="16" height="16" rx="3.5" />
+  <rect class="cut" x="4.75" y="13.25" width="14.5" height="1.6" />
+</svg>

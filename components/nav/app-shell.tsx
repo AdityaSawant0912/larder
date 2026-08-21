@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, ShoppingCart, Clock, Settings } from "lucide-react";
+import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Home", icon: Home },
+  { href: "/app", label: "Home", icon: Home },
   { href: "/grocery", label: "Grocery", icon: ShoppingCart },
   { href: "/use-soon", label: "Use Soon", icon: Clock },
   { href: "/settings", label: "Settings", icon: Settings },
@@ -28,7 +29,7 @@ export function AppShell({
     <div className="mx-auto flex min-h-0 w-full max-w-[78rem] flex-1">
       {/* Desktop: persistent left sidebar (docs/08-screens-desktop.md). */}
       <aside className="hidden w-56 shrink-0 flex-col border-r border-border bg-card/60 p-4 md:flex">
-        <div className="mb-6 font-display text-3xl">Larder</div>
+        <Logo className="mb-6" />
         <nav className="flex flex-1 flex-col gap-1">
           {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
             const active = pathname === href || pathname.startsWith(`${href}/`);

@@ -6,6 +6,15 @@ URL at `<app>.adityasawant.dev`. Three surfaces (desktop web, mobile web,
 native app) from one deployed codebase — the app shell has no logic of
 its own, it just loads the live site.
 
+**Structural note — one deliberate exception to "the shell has no logic
+of its own."** `android/.../DebugServerPlugin.java` is a small custom
+Capacitor plugin that lets the web app (Settings > Debug, gated to one
+debug account by email — UI-only, not a real auth boundary) tell the
+native WebView to reload against a different URL — e.g. a local dev
+address instead of the baked-in `server.url` — and persists that choice
+in SharedPreferences so it survives restarts. `lib/native/debugServer.ts`
+is the JS-side proxy. No iOS implementation yet.
+
 ## Data layer: no ORM
 
 Drizzle was considered but doesn't support MongoDB — it's SQL-only by
