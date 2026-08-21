@@ -9,14 +9,17 @@
     "lint": "eslint",
     "setup:search-indexes": "tsx scripts/setup-search-indexes.ts",
     "seed:demo": "tsx scripts/seed-demo.ts",
-    "cap:sync": "cap sync android",
-    "cap:open:android": "cap open android"
+    "cap:open:android": "cap open android",
+    "cap:sync:android": "cap sync android",
+    "cap:sync:ios": "cap sync ios",
+    "cap:open:ios": "cap open ios"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@capacitor/android": "^8.5.0",
     "@capacitor/cli": "^8.5.0",
     "@capacitor/core": "^8.5.0",
+    "@capacitor/ios": "^8.5.0",
     "@tanstack/react-query": "^5.101.4",
     "better-auth": "^1.7.1",
     "class-variance-authority": "^0.7.1",
