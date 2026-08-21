@@ -139,10 +139,17 @@ export function LandingPage() {
             your phone.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button size="lg" variant="outline" disabled className="gap-2">
-              <Download /> Android (APK)
-              <span className="ml-1 rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground">Coming soon</span>
-            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              nativeButton={false}
+              className="gap-2"
+              render={
+                <a href="/downloads/larder.apk" download>
+                  <Download /> Android (APK)
+                </a>
+              }
+            />
             <Button size="lg" variant="outline" disabled className="gap-2">
               <Apple /> iOS
               <span className="ml-1 rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground">Coming soon</span>
