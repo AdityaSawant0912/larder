@@ -1,6 +1,7 @@
 "use client";
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 import { apiGet, apiPost, apiDelete } from "@/lib/api/client";
 import type { UserUnitPresetDTO } from "@/lib/types/dto";
 
@@ -31,7 +32,9 @@ export function useUnitPresets(category: string, itemId?: string) {
   });
 }
 
-// "Other ->" manual entry writes back so it's offered next time.
+// "Other ->" manual entry writes back so it's offered next time. Runs
+// silently alongside whatever primary action triggered it — no success
+// toast, that'd double up with the parent form's own feedback.
 export function useLearnUnit() {
   const qc = useQueryClient();
   return useMutation({
@@ -41,6 +44,7 @@ export function useLearnUnit() {
       qc.invalidateQueries({ queryKey: ["unitPresets", category] });
       qc.invalidateQueries({ queryKey: unitPresetKeys.list });
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't save unit"),
   });
 }
 
@@ -53,6 +57,8 @@ export function useForgetUnit() {
     onSuccess: (_data, { category }) => {
       qc.invalidateQueries({ queryKey: ["unitPresets", category] });
       qc.invalidateQueries({ queryKey: unitPresetKeys.list });
+      toast.success("Unit removed");
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't remove unit"),
   });
 }

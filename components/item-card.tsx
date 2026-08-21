@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Repeat, Minus, Trash2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -28,24 +29,28 @@ export function ItemCard({
   onToggleSelect?: (itemId: string, formId: string) => void;
 }) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="font-display text-xl font-semibold">{item.name}</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-2">
-        {item.forms.map((form) => (
-          <FormRow
-            key={form.id}
-            itemId={item._id}
-            category={item.category}
-            form={form}
-            mode={mode}
-            selected={selectedFormIds?.has(form.id) ?? false}
-            onToggleSelect={onToggleSelect}
-          />
-        ))}
-      </CardContent>
-    </Card>
+    <motion.div layout initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.18 }}>
+      <Card>
+        <CardHeader>
+          <CardTitle className="font-display text-xl font-semibold">{item.name}</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          <AnimatePresence initial={false}>
+            {item.forms.map((form) => (
+              <FormRow
+                key={form.id}
+                itemId={item._id}
+                category={item.category}
+                form={form}
+                mode={mode}
+                selected={selectedFormIds?.has(form.id) ?? false}
+                onToggleSelect={onToggleSelect}
+              />
+            ))}
+          </AnimatePresence>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 }
 
@@ -74,7 +79,14 @@ function FormRow({
   const fraction = Math.max(0, remaining) / FRESHNESS_GAUGE_CEILING_DAYS;
 
   return (
-    <div className="flex items-center gap-3 rounded-lg border border-border/60 p-2.5">
+    <motion.div
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, scale: 0.96 }}
+      transition={{ duration: 0.18 }}
+      className="flex items-center gap-3 rounded-lg border border-border/60 p-2.5"
+    >
       {mode === "clearOut" ? (
         <Checkbox checked={selected} onCheckedChange={() => onToggleSelect?.(itemId, form.id)} />
       ) : null}
@@ -145,6 +157,6 @@ function FormRow({
           <ConvertDialog itemId={itemId} category={category} form={form} open={convertOpen} onOpenChange={setConvertOpen} />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

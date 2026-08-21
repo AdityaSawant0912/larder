@@ -1,8 +1,11 @@
 import { ObjectId } from "mongodb";
 import { userItemRepository } from "@/lib/repositories/userItemRepository";
 import * as resolution from "@/lib/services/itemResolutionService";
+import { matchCleanFraction } from "@/lib/domain/fractions";
 import type { UserItem, Form } from "@/lib/schemas/userItem";
 import type { Location } from "@/lib/schemas/shared";
+
+const EPSILON = 1e-9;
 
 // Home only renders items with at least one live form (docs/07) — zero-
 // stock items stay in the catalog but never appear here.
@@ -68,6 +71,13 @@ export async function resolveSelection(userId: ObjectId, selection: ItemSelectio
 // Consume reduces qty in place; hitting zero removes the form entirely
 // (the item identity persists per the schema decision, only the form
 // goes away).
+//
+// A decimal consume that lands on a clean fraction (half, third, quarter)
+// auto-splits: one extra whole unit is pulled out and diced into pieces,
+// the pieces you didn't eat become their own form (e.g. consume 0.5 of a
+// "whole" watermelon -> 1 whole eaten normally, this one gets sliced into
+// 2 "half", 1 consumed, 1 left over as a new "half" form). Anything that
+// isn't a clean fraction just decrements the qty on the same unit as before.
 export async function consumeForm(
   userId: ObjectId,
   itemId: ObjectId,
@@ -78,12 +88,28 @@ export async function consumeForm(
   if (!item) throw new Error("Item not found");
   const form = item.forms.find((f) => f.id.equals(formId));
   if (!form) throw new Error("Form not found");
+  if (consumedQty > form.qty + EPSILON) throw new Error("Can't consume more than what's left");
 
-  const remaining = form.qty - consumedQty;
-  if (remaining <= 0) {
+  const whole = Math.floor(consumedQty);
+  const frac = consumedQty - whole;
+  const fraction = frac > EPSILON ? matchCleanFraction(frac) : null;
+
+  const unitsExtracted = fraction ? whole + 1 : consumedQty;
+  const remaining = form.qty - unitsExtracted;
+  if (remaining <= EPSILON) {
     await userItemRepository.removeForm(userId, itemId, formId);
   } else {
     await userItemRepository.updateForm(userId, itemId, formId, { qty: remaining });
+  }
+
+  if (fraction) {
+    await userItemRepository.addForm(userId, itemId, {
+      unit: fraction.unit,
+      qty: fraction.piecesRemaining,
+      location: form.location,
+      shelfLifeDays: form.shelfLifeDays,
+      addedDate: new Date(),
+    });
   }
 }
 
@@ -95,16 +121,30 @@ export interface ConvertOutput {
   note?: string;
 }
 
-// e.g. 1 whole watermelon -> 4 containers: removes the source form,
-// appends the resulting output forms. Single document, so this is
-// already atomic without a transaction.
+// e.g. 2 whole watermelons, convert 1 of them -> 4 containers: pulls
+// `convertQty` out of the source form (deleting it entirely only if that
+// empties it) and appends the resulting output forms. Single document, so
+// this is already atomic without a transaction.
 export async function convertForm(
   userId: ObjectId,
   itemId: ObjectId,
   formId: ObjectId,
+  convertQty: number,
   outputs: ConvertOutput[]
 ): Promise<void> {
-  await userItemRepository.removeForm(userId, itemId, formId);
+  const item = await userItemRepository.findById(userId, itemId);
+  if (!item) throw new Error("Item not found");
+  const form = item.forms.find((f) => f.id.equals(formId));
+  if (!form) throw new Error("Form not found");
+  if (convertQty > form.qty + EPSILON) throw new Error("Can't convert more than what's left");
+
+  const remaining = form.qty - convertQty;
+  if (remaining <= EPSILON) {
+    await userItemRepository.removeForm(userId, itemId, formId);
+  } else {
+    await userItemRepository.updateForm(userId, itemId, formId, { qty: remaining });
+  }
+
   for (const output of outputs) {
     await userItemRepository.addForm(userId, itemId, {
       ...output,

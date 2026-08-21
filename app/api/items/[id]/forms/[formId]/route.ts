@@ -10,6 +10,7 @@ const patchSchema = z.discriminatedUnion("action", [
   z.object({ action: z.literal("consume"), qty: z.number().positive() }),
   z.object({
     action: z.literal("convert"),
+    qty: z.number().positive(),
     outputs: z.array(
       z.object({
         unit: z.string().min(1),
@@ -36,7 +37,7 @@ export async function PATCH(
     if (body.action === "consume") {
       await consumeForm(userId, itemId, fId, body.qty);
     } else {
-      await convertForm(userId, itemId, fId, body.outputs);
+      await convertForm(userId, itemId, fId, body.qty, body.outputs);
     }
     return NextResponse.json({ ok: true });
   } catch (err) {

@@ -125,9 +125,11 @@ export default function HomePage() {
             </p>
           ) : (
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((item) => (
-                <ItemCard key={item._id} item={item} mode="track" />
-              ))}
+              <AnimatePresence initial={false}>
+                {filtered.map((item) => (
+                  <ItemCard key={item._id} item={item} mode="track" />
+                ))}
+              </AnimatePresence>
             </div>
           )}
 
@@ -150,15 +152,17 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-3 pb-24 md:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((item) => (
-              <ItemCard
-                key={item._id}
-                item={item}
-                mode="clearOut"
-                selectedFormIds={new Set([...clearOutSelection].filter((k) => k.startsWith(`${item._id}:`)).map((k) => k.split(":")[1]))}
-                onToggleSelect={toggleClearOutSelect}
-              />
-            ))}
+            <AnimatePresence initial={false}>
+              {filtered.map((item) => (
+                <ItemCard
+                  key={item._id}
+                  item={item}
+                  mode="clearOut"
+                  selectedFormIds={new Set([...clearOutSelection].filter((k) => k.startsWith(`${item._id}:`)).map((k) => k.split(":")[1]))}
+                  onToggleSelect={toggleClearOutSelect}
+                />
+              ))}
+            </AnimatePresence>
           </div>
 
           <AnimatePresence>

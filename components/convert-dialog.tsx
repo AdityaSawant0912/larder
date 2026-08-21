@@ -33,12 +33,15 @@ export function ConvertDialog({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
+  const [convertQty, setConvertQty] = useState(form.qty);
   const [outputs, setOutputs] = useState<ConvertOutput[]>([
     { unit: form.unit, qty: 1, location: form.location, shelfLifeDays: form.shelfLifeDays },
   ]);
   const convertForm = useConvertForm();
   const { data: unitPresets } = useUnitPresets(category, itemId);
   const learnUnit = useLearnUnit();
+
+  const validQty = convertQty > 0 && convertQty <= form.qty;
 
   async function addOtherUnit(i: number, newUnit: string) {
     updateOutput(i, { unit: newUnit });
@@ -50,8 +53,9 @@ export function ConvertDialog({
   }
 
   async function onSubmit() {
-    await convertForm.mutateAsync({ itemId, formId: form.id, outputs });
+    await convertForm.mutateAsync({ itemId, formId: form.id, qty: convertQty, outputs });
     onOpenChange(false);
+    setConvertQty(form.qty);
     setOutputs([{ unit: form.unit, qty: 1, location: form.location, shelfLifeDays: form.shelfLifeDays }]);
   }
 
@@ -60,9 +64,21 @@ export function ConvertDialog({
       open={open}
       onOpenChange={onOpenChange}
       title="Convert"
-      description={`Turn this ${form.unit} into something else.`}
+      description={`Turn some of this ${form.unit} into something else.`}
     >
       <div className="space-y-3">
+        <div className="space-y-1">
+          <Label className="text-xs">Convert how much (of {form.qty} {form.unit})</Label>
+          <Input
+            type="number"
+            min={0.01}
+            max={form.qty}
+            step="any"
+            value={convertQty}
+            onChange={(e) => setConvertQty(Number(e.target.value))}
+          />
+        </div>
+
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {outputs.map((output, i) => (
             <div key={i} className="space-y-2 rounded-lg border border-border p-3">
@@ -139,7 +155,7 @@ export function ConvertDialog({
           <Plus /> Add output
         </Button>
 
-        <Button className="w-full" onClick={onSubmit} disabled={convertForm.isPending || outputs.length === 0}>
+        <Button className="w-full" onClick={onSubmit} disabled={convertForm.isPending || outputs.length === 0 || !validQty}>
           {convertForm.isPending ? "Converting..." : "Convert"}
         </Button>
       </div>

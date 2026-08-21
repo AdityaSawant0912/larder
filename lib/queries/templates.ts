@@ -1,6 +1,7 @@
 "use client";
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 import { apiGet, apiPost, apiDelete } from "@/lib/api/client";
 import { groceryKeys } from "@/lib/queries/groceryList";
 import type { ListTemplateDTO, TemplateItemDTO } from "@/lib/types/dto";
@@ -21,7 +22,11 @@ export function useCreateTemplate() {
   return useMutation({
     mutationFn: (input: { name: string; items: TemplateItemDTO[] }) =>
       apiPost<ListTemplateDTO>("/api/templates", input),
-    onSuccess: () => qc.invalidateQueries({ queryKey: templateKeys.list }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: templateKeys.list });
+      toast.success("Template saved");
+    },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't save template"),
   });
 }
 
@@ -29,7 +34,11 @@ export function useDeleteTemplate() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (id: string) => apiDelete(`/api/templates/${id}`),
-    onSuccess: () => qc.invalidateQueries({ queryKey: templateKeys.list }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: templateKeys.list });
+      toast.success("Template deleted");
+    },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't delete template"),
   });
 }
 
@@ -39,6 +48,10 @@ export function useApplyTemplate() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (id: string) => apiPost(`/api/templates/${id}/apply`),
-    onSuccess: () => qc.invalidateQueries({ queryKey: groceryKeys.list }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: groceryKeys.list });
+      toast.success("Added to grocery list");
+    },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't apply template"),
   });
 }

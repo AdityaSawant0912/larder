@@ -1,6 +1,7 @@
 "use client";
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 import { apiGet, apiPost, apiPatch, apiDelete } from "@/lib/api/client";
 import { useSoonKey } from "@/lib/queries/useSoon";
 import type {
@@ -55,7 +56,11 @@ export function useCreateCatalogItem() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (input: CreateCatalogItemInput) => apiPost<UserItemDTO>("/api/items", input),
-    onSuccess: () => qc.invalidateQueries({ queryKey: itemKeys.catalog }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: itemKeys.catalog });
+      toast.success("Added to catalog");
+    },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't add item"),
   });
 }
 
@@ -77,7 +82,9 @@ export function usePatchCatalogItem() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: itemKeys.catalog });
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
+      toast.success("Item updated");
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't update item"),
   });
 }
 
@@ -88,7 +95,9 @@ export function useDeleteCatalogItem() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: itemKeys.catalog });
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
+      toast.success("Item deleted");
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't delete item"),
   });
 }
 
@@ -112,10 +121,13 @@ export function useResolveAndAddForm() {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: itemKeys.catalog });
       qc.invalidateQueries({ queryKey: useSoonKey });
+      toast.success("Added to pantry");
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't add item"),
   });
 }
 
+// Feedback here is the row's exit animation (item-card.tsx), not a toast.
 export function useConsumeForm() {
   const qc = useQueryClient();
   return useMutation({
@@ -125,6 +137,7 @@ export function useConsumeForm() {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: useSoonKey });
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't consume item"),
   });
 }
 
@@ -142,19 +155,24 @@ export function useConvertForm() {
     mutationFn: ({
       itemId,
       formId,
+      qty,
       outputs,
     }: {
       itemId: string;
       formId: string;
+      qty: number;
       outputs: ConvertOutput[];
-    }) => apiPatch(`/api/items/${itemId}/forms/${formId}`, { action: "convert", outputs }),
+    }) => apiPatch(`/api/items/${itemId}/forms/${formId}`, { action: "convert", qty, outputs }),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: useSoonKey });
+      toast.success("Converted");
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't convert item"),
   });
 }
 
+// Feedback here is the row's exit animation (item-card.tsx), not a toast.
 export function useDeleteForm() {
   const qc = useQueryClient();
   return useMutation({
@@ -164,6 +182,7 @@ export function useDeleteForm() {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: useSoonKey });
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't remove item"),
   });
 }
 
@@ -183,15 +202,18 @@ export function useCommitRestock() {
   return useMutation({
     mutationFn: (queue: RestockQueueRow[]) =>
       apiPost<{ ok: true; count: number }>("/api/restock/commit", { queue }),
-    onSuccess: () => {
+    onSuccess: (data) => {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: itemKeys.catalog });
       qc.invalidateQueries({ queryKey: useSoonKey });
+      toast.success(`Added ${data.count} item${data.count === 1 ? "" : "s"} to pantry`);
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't add items"),
   });
 }
 
 // Clear-Out's "Discard N items" (docs/07-screens-mobile "Clear-Out mode").
+// Feedback here is the cards' exit animation, not a toast.
 export function useDiscardClearOut() {
   const qc = useQueryClient();
   return useMutation({
@@ -201,5 +223,6 @@ export function useDiscardClearOut() {
       qc.invalidateQueries({ queryKey: itemKeys.pantry });
       qc.invalidateQueries({ queryKey: useSoonKey });
     },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't discard items"),
   });
 }
