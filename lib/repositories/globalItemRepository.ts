@@ -24,4 +24,18 @@ export const globalItemRepository = {
     await col.insertOne(doc);
     return globalItemSchema.parse(doc);
   },
+
+  async createMany(inputs: GlobalItemInput[]): Promise<GlobalItem[]> {
+    if (inputs.length === 0) return [];
+    const col = await globalItemsCollection();
+    const docs = inputs.map((input) => ({ ...input, _id: new ObjectId(), createdAt: new Date() }));
+    await col.insertMany(docs);
+    return docs.map((d) => globalItemSchema.parse(d));
+  },
+
+  async findAllNames(): Promise<string[]> {
+    const col = await globalItemsCollection();
+    const docs = await col.find({}, { projection: { name: 1 } }).toArray();
+    return docs.map((d) => d.name);
+  },
 };

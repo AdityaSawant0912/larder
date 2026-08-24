@@ -1,0 +1,5514 @@
+[
+  {
+    "name": "Apples",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Bananas",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 6,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Oranges",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Grapes",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Strawberries",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Blueberries",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Raspberries",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Blackberries",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pineapple",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Mango",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Watermelon",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cantaloupe",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Honeydew Melon",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Kiwi",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Peaches",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Plums",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pears",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cherries",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Avocado",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Lemons",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 28,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Limes",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 28,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Grapefruit",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pomegranate",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Papaya",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Apricots",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Figs",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Nectarines",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Dragon Fruit",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Passion Fruit",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Coconut",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Carrots",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Celery",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Broccoli",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cauliflower",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cabbage",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Lettuce",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Romaine Lettuce",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Spinach",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 6,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Kale",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Arugula",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Bell Peppers",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Jalapenos",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cucumbers",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Zucchini",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Yellow Squash",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Tomatoes",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Cherry Tomatoes",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Potatoes",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sweet Potatoes",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 35,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Onions",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Red Onions",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Green Onions",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Garlic",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ginger",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Mushrooms",
+    "category": "produce",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Corn",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Green Beans",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Asparagus",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Fresh Peas",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Brussels Sprouts",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Eggplant",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Radishes",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Beets",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Turnips",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Leeks",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Fennel",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Okra",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Butternut Squash",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Acorn Squash",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pumpkin",
+    "category": "produce",
+    "defaultUnit": "whole",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Shallots",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Scallions",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Snow Peas",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Bok Choy",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Chili Peppers",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Basil",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Cilantro",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Parsley",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Mint",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Dill",
+    "category": "produce",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Rosemary",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Thyme",
+    "category": "produce",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Milk",
+    "category": "dairy",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Almond Milk",
+    "category": "dairy",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Soy Milk",
+    "category": "dairy",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Oat Milk",
+    "category": "dairy",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Coconut Milk (Carton)",
+    "category": "dairy",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Half and Half",
+    "category": "dairy",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Heavy Cream",
+    "category": "dairy",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Buttermilk",
+    "category": "dairy",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Butter",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Margarine",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 150,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cream Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Sour Cream",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cottage Cheese",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Ricotta Cheese",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Mascarpone",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Greek Yogurt",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Yogurt",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cheddar Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Mozzarella Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Shredded Mozzarella",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Parmesan Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Swiss Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 120,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Provolone Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Feta Cheese",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Goat Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Brie Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Blue Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Gouda Cheese",
+    "category": "dairy",
+    "defaultUnit": "block",
+    "defaultShelfLifeDays": 120,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "String Cheese",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Sliced Cheese",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Whipped Cream",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Creme Fraiche",
+    "category": "dairy",
+    "defaultUnit": "tub",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Kefir",
+    "category": "dairy",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Egg Substitute",
+    "category": "dairy",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Eggs",
+    "category": "eggs",
+    "defaultUnit": "dozen",
+    "defaultShelfLifeDays": 28,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Brown Eggs",
+    "category": "eggs",
+    "defaultUnit": "dozen",
+    "defaultShelfLifeDays": 28,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Free-Range Eggs",
+    "category": "eggs",
+    "defaultUnit": "dozen",
+    "defaultShelfLifeDays": 28,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Organic Eggs",
+    "category": "eggs",
+    "defaultUnit": "dozen",
+    "defaultShelfLifeDays": 28,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Egg Whites (Carton)",
+    "category": "eggs",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Duck Eggs",
+    "category": "eggs",
+    "defaultUnit": "dozen",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Quail Eggs",
+    "category": "eggs",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Hard-Boiled Eggs",
+    "category": "eggs",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "White Rice",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Brown Rice",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Basmati Rice",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Jasmine Rice",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Quinoa",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Couscous",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Spaghetti",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Penne Pasta",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Macaroni",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fusilli Pasta",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Lasagna Noodles",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Egg Noodles",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rice Noodles",
+    "category": "pantry",
+    "defaultUnit": "packet",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ramen Noodles",
+    "category": "pantry",
+    "defaultUnit": "packet",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "All-Purpose Flour",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Whole Wheat Flour",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bread Flour",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cake Flour",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cornmeal",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "White Sugar",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Brown Sugar",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Powdered Sugar",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Honey",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Maple Syrup",
+    "category": "pantry",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baking Soda",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baking Powder",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Yeast",
+    "category": "pantry",
+    "defaultUnit": "packet",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cornstarch",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Vanilla Extract",
+    "category": "pantry",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rolled Oats",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Steel Cut Oats",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Granola",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cereal",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bread Crumbs",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Panko Breadcrumbs",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Lentils",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Chickpeas",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Black Beans",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Kidney Beans",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Split Peas",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Peanut Butter",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Almond Butter",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Nutella",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Jam",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Jelly",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ground Coffee",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Coffee Beans",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Instant Coffee",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Tea Bags",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Loose Leaf Tea",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cocoa Powder",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Chocolate Chips",
+    "category": "pantry",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baking Chocolate",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Vegetable Oil",
+    "category": "pantry",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canola Oil",
+    "category": "pantry",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sesame Oil",
+    "category": "pantry",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Coconut Oil",
+    "category": "pantry",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Breadsticks (Pantry)",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Crackers",
+    "category": "pantry",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Tortillas (Pantry)",
+    "category": "pantry",
+    "defaultUnit": "packet",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Chicken Breast",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Chicken Thighs",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Chicken Wings",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Whole Chicken",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Ground Chicken",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Ground Beef",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Ground Turkey",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Ground Pork",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Beef Steak",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Beef Roast",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Beef Brisket",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pork Chops",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pork Tenderloin",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pork Ribs",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Bacon",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Sausage",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Italian Sausage",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Hot Dogs",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Sliced Ham",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Whole Ham",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Salami",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pepperoni",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Turkey Breast",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Deli Turkey",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Deli Ham",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Deli Roast Beef",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Lamb Chops",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Ground Lamb",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Veal",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Chicken Breast (Frozen)",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Ground Beef (Frozen)",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 120,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Pork Chops (Frozen)",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Bacon (Frozen)",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Sausage Links (Frozen)",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Beef Stew Meat",
+    "category": "meat",
+    "defaultUnit": "lb",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Steak Strips",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Meatballs",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Chorizo",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Prosciutto",
+    "category": "meat",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Duck Breast",
+    "category": "meat",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Salmon Fillet",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Tuna Steak",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Tilapia",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cod",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Halibut",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Shrimp",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Shrimp (Frozen)",
+    "category": "seafood",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Scallops",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Crab Meat",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Crab Legs",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Lobster Tail",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Mussels",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Clams",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Oysters",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Calamari",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Salmon Fillet (Frozen)",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Tilapia (Frozen)",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Cod (Frozen)",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Fish Sticks (Frozen)",
+    "category": "seafood",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Smoked Salmon",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Canned Tuna",
+    "category": "seafood",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Salmon",
+    "category": "seafood",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Anchovies",
+    "category": "seafood",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sardines",
+    "category": "seafood",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Catfish",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Mahi Mahi",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Swordfish",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Trout",
+    "category": "seafood",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Squid",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Octopus",
+    "category": "seafood",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Peas",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Corn",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Mixed Vegetables",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Broccoli",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Spinach",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Green Beans",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Carrots",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Strawberries",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Blueberries",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Mixed Berries",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Mango",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Pineapple",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen French Fries",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Hash Browns",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Tater Tots",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Pizza",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Waffles",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Pancakes",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Burritos",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Dumplings",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Ice Cream",
+    "category": "frozen",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Sorbet",
+    "category": "frozen",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Yogurt",
+    "category": "frozen",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Ice Pops",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Chicken Nuggets",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Meatballs",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Lasagna",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Pot Pie",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Edamame",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Cauliflower Rice",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Breakfast Sandwiches",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Garlic Bread",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Pie Crust",
+    "category": "frozen",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Bread Dough",
+    "category": "frozen",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "Frozen Smoothie Packs",
+    "category": "frozen",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "freezer",
+    "status": "active"
+  },
+  {
+    "name": "White Bread",
+    "category": "bakery",
+    "defaultUnit": "loaf",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Whole Wheat Bread",
+    "category": "bakery",
+    "defaultUnit": "loaf",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Sourdough Bread",
+    "category": "bakery",
+    "defaultUnit": "loaf",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Baguette",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Bagels",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "English Muffins",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dinner Rolls",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Hamburger Buns",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hot Dog Buns",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Flour Tortillas",
+    "category": "bakery",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pita Bread",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Naan",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Croissants",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Donuts",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Muffins",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Cupcakes",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Cookies",
+    "category": "bakery",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cake",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pie",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Brownies",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cinnamon Rolls",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Scones",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Soft Pretzels",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 2,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Bakery Breadsticks",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Pizza Dough",
+    "category": "bakery",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pie Crust",
+    "category": "bakery",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Puff Pastry",
+    "category": "bakery",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Phyllo Dough",
+    "category": "bakery",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Rye Bread",
+    "category": "bakery",
+    "defaultUnit": "loaf",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Challah Bread",
+    "category": "bakery",
+    "defaultUnit": "loaf",
+    "defaultShelfLifeDays": 4,
+    "defaultLocation": "counter",
+    "status": "active"
+  },
+  {
+    "name": "Orange Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Apple Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Grape Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cranberry Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 21,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Lemonade",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Iced Tea",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cola",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Lemon-Lime Soda",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ginger Ale",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Root Beer",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sparkling Water",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Tonic Water",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Club Soda",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bottled Water",
+    "category": "beverages",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Coconut Water",
+    "category": "beverages",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sports Drink",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Energy Drink",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Kombucha",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Almond Milk (Bottled)",
+    "category": "beverages",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Milk Chocolate Drink",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Coffee Creamer",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cold Brew Coffee",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 10,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Bottled Iced Coffee",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Hot Chocolate Mix",
+    "category": "beverages",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Powdered Lemonade Mix",
+    "category": "beverages",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fruit Punch",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Tomato Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Vegetable Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Prune Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Sparkling Juice",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Protein Shake",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Almond Milk Creamer",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Chai Concentrate",
+    "category": "beverages",
+    "defaultUnit": "carton",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Matcha Powder",
+    "category": "beverages",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Electrolyte Powder Packets",
+    "category": "beverages",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Seltzer Water",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Apple Cider",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Non-Alcoholic Beer",
+    "category": "beverages",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Herbal Iced Tea",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bottled Fruit Smoothie",
+    "category": "beverages",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Potato Chips",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Tortilla Chips",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pretzels",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Microwave Popcorn",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Popcorn Kernels",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Popped Popcorn",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cheese Puffs",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Corn Chips",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rice Cakes",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Granola Bars",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Protein Bars",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Trail Mix",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 120,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Mixed Nuts",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Almonds",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cashews",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Peanuts",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pistachios",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Walnuts",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pecans",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Fruit Mix",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Raisins",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Apricots",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Cranberries",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Beef Jerky",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fruit Snacks",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fruit Leather",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cheese Crackers",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Graham Crackers",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 120,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rice Crackers",
+    "category": "snacks",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Chocolate Bar",
+    "category": "snacks",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Candy Bar",
+    "category": "snacks",
+    "defaultUnit": "piece",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Gummy Candy",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Chocolate Covered Pretzels",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Snack Mix",
+    "category": "snacks",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 90,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Seaweed Snacks",
+    "category": "snacks",
+    "defaultUnit": "packet",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Salt",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Black Pepper",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Paprika",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Smoked Paprika",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cumin",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Chili Powder",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cayenne Pepper",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Garlic Powder",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Onion Powder",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Oregano",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Basil",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Thyme",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Rosemary",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Parsley",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bay Leaves",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cinnamon",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Nutmeg",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cloves",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Allspice",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ginger Powder",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Turmeric",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Coriander",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cardamom",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Curry Powder",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Garam Masala",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Chili Flakes",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Red Pepper Flakes",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Italian Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Taco Seasoning",
+    "category": "spices",
+    "defaultUnit": "packet",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fajita Seasoning",
+    "category": "spices",
+    "defaultUnit": "packet",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Poultry Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cajun Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Old Bay Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Everything Bagel Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Steak Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Lemon Pepper",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dill Weed",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Mustard Powder",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Saffron",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Vanilla Bean",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sesame Seeds",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Poppy Seeds",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fennel Seeds",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Mustard Seeds",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Star Anise",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Five Spice Powder",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Herbes de Provence",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Za'atar",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "MSG Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Celery Salt",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Onion Flakes",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Garlic Flakes",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Chives",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Tarragon",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Marjoram",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dried Sage",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "White Pepper",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pink Himalayan Salt",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sea Salt",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Adobo Seasoning",
+    "category": "spices",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ketchup",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Yellow Mustard",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dijon Mustard",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Whole Grain Mustard",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Mayonnaise",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Ranch Dressing",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Italian Dressing",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Caesar Dressing",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 60,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Balsamic Vinaigrette",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "BBQ Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hot Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sriracha",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Soy Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Teriyaki Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Worcestershire Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fish Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Oyster Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hoisin Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Salsa",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 30,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pico de Gallo",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 5,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Guacamole",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 3,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pesto",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Marinara Sauce",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Pasta Sauce",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 14,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Alfredo Sauce",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Balsamic Dressing",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "White Vinegar",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Apple Cider Vinegar",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rice Vinegar",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Red Wine Vinegar",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Tahini",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Horseradish",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Relish",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pickles",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Capers",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Maple Mustard Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Chimichurri",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 7,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Tartar Sauce",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Cocktail Sauce",
+    "category": "condiments",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Steak Sauce",
+    "category": "condiments",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Tomatoes",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Tomato Sauce",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Tomato Paste",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Corn",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Green Beans",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Peas",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Black Beans",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Kidney Beans",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Chickpeas",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Pinto Beans",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Lentil Soup",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Chicken Soup",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Vegetable Soup",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Tomato Soup",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Chili",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Pumpkin Puree",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Coconut Milk",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Mandarin Oranges",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Peaches",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Pineapple",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Pears",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Mixed Fruit",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Olives",
+    "category": "canned",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Artichoke Hearts",
+    "category": "canned",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Water Chestnuts",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Bamboo Shoots",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Refried Beans",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Beets",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Mushrooms",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Canned Evaporated Milk",
+    "category": "canned",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Paper Towels",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Toilet Paper",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Facial Tissue",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Napkins",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Aluminum Foil",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Plastic Wrap",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Parchment Paper",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Wax Paper",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ziplock Bags",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sandwich Bags",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Trash Bags",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dish Soap",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dishwasher Detergent",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Laundry Detergent",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fabric Softener",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Stain Remover",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bleach",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "All-Purpose Cleaner",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Glass Cleaner",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Disinfecting Wipes",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sponges",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Scrub Brushes",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rubber Gloves",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Air Freshener",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Candles",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Light Bulbs",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "AA Batteries",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "AAA Batteries",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Matches",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Lighter",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Freezer Storage Bags",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dryer Sheets",
+    "category": "household",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Toilet Bowl Cleaner",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Furniture Polish",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Wood Cleaner",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Floor Cleaner",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Carpet Cleaner",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Insect Repellent Spray",
+    "category": "household",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Mouse Traps",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Shoe Polish",
+    "category": "household",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Shampoo",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Conditioner",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Body Wash",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bar Soap",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hand Soap",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Toothpaste",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Toothbrush",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Mouthwash",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dental Floss",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Deodorant",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Antiperspirant",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Razors",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Shaving Cream",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Aftershave",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Lotion",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hand Cream",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sunscreen",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Lip Balm",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hair Gel",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hairspray",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hair Treatment Conditioner",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cotton Swabs",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cotton Balls",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Makeup Remover Wipes",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Feminine Pads",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Tampons",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Nail Clippers",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hairbrush",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Travel Facial Tissue",
+    "category": "personal care",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Body Lotion",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Face Wash",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Moisturizer",
+    "category": "personal care",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Contact Lens Solution",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hand Sanitizer",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Nail Polish Remover",
+    "category": "personal care",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Formula",
+    "category": "baby",
+    "defaultUnit": "container",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Diapers",
+    "category": "baby",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Wipes",
+    "category": "baby",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Food Puree",
+    "category": "baby",
+    "defaultUnit": "jar",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Cereal",
+    "category": "baby",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Diaper Rash Cream",
+    "category": "baby",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Shampoo",
+    "category": "baby",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Lotion",
+    "category": "baby",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Powder",
+    "category": "baby",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Oil",
+    "category": "baby",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pacifiers",
+    "category": "baby",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Bottles",
+    "category": "baby",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Teething Gel",
+    "category": "baby",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Laundry Detergent",
+    "category": "baby",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Nursing Pads",
+    "category": "baby",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Puffs Snacks",
+    "category": "baby",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Toddler Snack Bars",
+    "category": "baby",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Sunscreen",
+    "category": "baby",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Training Pants",
+    "category": "baby",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Baby Bath Wash",
+    "category": "baby",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dry Dog Food",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Wet Dog Food",
+    "category": "pet",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dry Cat Food",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Wet Cat Food",
+    "category": "pet",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dog Treats",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cat Treats",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 270,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cat Litter",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pet Shampoo",
+    "category": "pet",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Flea Treatment",
+    "category": "pet",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pet Vitamins",
+    "category": "pet",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dog Chew Bones",
+    "category": "pet",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bird Seed",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fish Food",
+    "category": "pet",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hamster Food",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rabbit Food Pellets",
+    "category": "pet",
+    "defaultUnit": "bag",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Puppy Pads",
+    "category": "pet",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Pet Waste Bags",
+    "category": "pet",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Catnip",
+    "category": "pet",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Dog Dental Chews",
+    "category": "pet",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Aquarium Water Conditioner",
+    "category": "pet",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Beer",
+    "category": "alcohol",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Craft Beer",
+    "category": "alcohol",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Light Beer",
+    "category": "alcohol",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Red Wine",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "White Wine",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rose Wine",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sparkling Wine",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Champagne",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Vodka",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Whiskey",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bourbon",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rum",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Gin",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Tequila",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Brandy",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Scotch Whisky",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 3650,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hard Seltzer",
+    "category": "alcohol",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Alcoholic Cider",
+    "category": "alcohol",
+    "defaultUnit": "can",
+    "defaultShelfLifeDays": 180,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Sake",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Vermouth",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "fridge",
+    "status": "active"
+  },
+  {
+    "name": "Coffee Liqueur",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Orange Liqueur",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Port Wine",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Sherry",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cocktail Mixer",
+    "category": "alcohol",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Multivitamin",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Vitamin C",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Vitamin D",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Fish Oil",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Probiotics",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Ibuprofen",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Acetaminophen",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Aspirin",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Allergy Medicine",
+    "category": "health",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cough Syrup",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Cough Drops",
+    "category": "health",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Antacid Tablets",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 1095,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Bandages",
+    "category": "health",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Antibiotic Ointment",
+    "category": "health",
+    "defaultUnit": "tube",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Hydrogen Peroxide",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Rubbing Alcohol",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Thermometer Covers",
+    "category": "health",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Travel Hand Sanitizer",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Face Masks",
+    "category": "health",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "First Aid Tape",
+    "category": "health",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 1825,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Electrolyte Tablets",
+    "category": "health",
+    "defaultUnit": "box",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Melatonin",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Protein Powder",
+    "category": "health",
+    "defaultUnit": "pack",
+    "defaultShelfLifeDays": 365,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Calcium Supplement",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  },
+  {
+    "name": "Iron Supplement",
+    "category": "health",
+    "defaultUnit": "bottle",
+    "defaultShelfLifeDays": 730,
+    "defaultLocation": "pantry",
+    "status": "active"
+  }
+]

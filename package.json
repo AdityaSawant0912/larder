@@ -9,6 +9,7 @@
     "lint": "eslint",
     "setup:search-indexes": "tsx scripts/setup-search-indexes.ts",
     "seed:demo": "tsx scripts/seed-demo.ts",
+    "seed:global-items": "tsx scripts/seed-global-items.ts",
     "cap:open:android": "cap open android",
     "cap:sync:android": "cap sync android",
     "cap:sync:ios": "cap sync ios",
