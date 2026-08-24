@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { FreshnessGauge } from "@/components/freshness-gauge";
 import { ConvertDialog } from "@/components/convert-dialog";
 import { useConsumeForm, useDeleteForm } from "@/lib/queries/items";
+import { useConsumeHouseholdForm, useDeleteHouseholdForm } from "@/lib/queries/households";
 import { daysLeft, freshnessState, FRESHNESS_GAUGE_CEILING_DAYS } from "@/lib/domain/freshness";
 import { cn } from "@/lib/utils";
 import type { FormDTO } from "@/lib/types/dto";
@@ -32,18 +33,19 @@ export function ItemCard({
   selectedFormIds,
   onToggleSelect,
   householdBadge,
-  readOnly,
+  householdId,
 }: {
   item: ItemCardData;
   mode: ItemCardMode;
   selectedFormIds?: Set<string>;
   onToggleSelect?: (itemId: string, formId: string) => void;
   // Set when this card is a shared item merged in from a household's
-  // pantry — shows which household it belongs to and hides the
-  // consume/convert/delete actions (those aren't wired up for household
-  // items yet, see plan's "out of scope").
+  // pantry — shows which household it belongs to.
   householdBadge?: string;
-  readOnly?: boolean;
+  // Set for any household item (merged into Home, or on the household's
+  // own Pantry tab) — routes consume/convert/delete through the
+  // household-scoped API instead of the personal one.
+  householdId?: string;
 }) {
   return (
     <motion.div layout initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.18 }}>
@@ -69,7 +71,7 @@ export function ItemCard({
                 mode={mode}
                 selected={selectedFormIds?.has(form.id) ?? false}
                 onToggleSelect={onToggleSelect}
-                readOnly={readOnly}
+                householdId={householdId}
               />
             ))}
           </AnimatePresence>
@@ -86,7 +88,7 @@ function FormRow({
   mode,
   selected,
   onToggleSelect,
-  readOnly,
+  householdId,
 }: {
   itemId: string;
   category: string;
@@ -94,12 +96,16 @@ function FormRow({
   mode: ItemCardMode;
   selected: boolean;
   onToggleSelect?: (itemId: string, formId: string) => void;
-  readOnly?: boolean;
+  householdId?: string;
 }) {
   const [convertOpen, setConvertOpen] = useState(false);
   const [consumeQty, setConsumeQty] = useState(1);
-  const consumeForm = useConsumeForm();
-  const deleteForm = useDeleteForm();
+  const personalConsume = useConsumeForm();
+  const personalDelete = useDeleteForm();
+  const householdConsume = useConsumeHouseholdForm(householdId ?? "");
+  const householdDelete = useDeleteHouseholdForm(householdId ?? "");
+  const consumeForm = householdId ? householdConsume : personalConsume;
+  const deleteForm = householdId ? householdDelete : personalDelete;
 
   const remaining = daysLeft(new Date(form.addedDate), form.shelfLifeDays);
   const state = freshnessState(remaining);
@@ -136,7 +142,7 @@ function FormRow({
         <FreshnessGauge fraction={fraction} state={state} seed={form.id} />
       </div>
 
-      {mode === "track" && !readOnly && (
+      {mode === "track" && (
         <div className="flex shrink-0 items-center gap-0.5">
           <Popover>
             <PopoverTrigger
@@ -182,7 +188,14 @@ function FormRow({
             <Trash2 />
           </Button>
 
-          <ConvertDialog itemId={itemId} category={category} form={form} open={convertOpen} onOpenChange={setConvertOpen} />
+          <ConvertDialog
+            itemId={itemId}
+            category={category}
+            form={form}
+            open={convertOpen}
+            onOpenChange={setConvertOpen}
+            householdId={householdId}
+          />
         </div>
       )}
     </motion.div>

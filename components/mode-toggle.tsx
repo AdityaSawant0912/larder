@@ -12,12 +12,21 @@ const MODES: { value: HomeMode; label: string }[] = [
 
 // docs/07 (mode toggle near top of Home) / docs/08 (moves into the top
 // bar on desktop) — one component reused in both positions, per its
-// containing layout's Tailwind classes.
-export function ModeToggle({ mode, onModeChange }: { mode: HomeMode; onModeChange: (mode: HomeMode) => void }) {
+// containing layout's Tailwind classes. `modes` restricts which tabs show
+// (e.g. household Pantry only offers Track/Clear-Out, no Restock).
+export function ModeToggle({
+  mode,
+  onModeChange,
+  modes = MODES.map((m) => m.value),
+}: {
+  mode: HomeMode;
+  onModeChange: (mode: HomeMode) => void;
+  modes?: HomeMode[];
+}) {
   return (
     <Tabs value={mode} onValueChange={(v) => onModeChange(v as HomeMode)}>
       <TabsList>
-        {MODES.map(({ value, label }) => (
+        {MODES.filter((m) => modes.includes(m.value)).map(({ value, label }) => (
           <TabsTrigger key={value} value={value}>
             {label}
           </TabsTrigger>

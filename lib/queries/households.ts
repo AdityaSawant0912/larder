@@ -245,3 +245,69 @@ export function useAddAllToHouseholdPantry(householdId: string) {
     onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't add items"),
   });
 }
+
+// Household pantry item actions — mirror items.ts's useConsumeForm/
+// useConvertForm/useDeleteForm, hitting the household-scoped routes and
+// invalidating householdKeys.pantry (shared by both the household's own
+// Pantry tab and Home's merged view).
+export function useConsumeHouseholdForm(householdId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ itemId, formId, qty }: { itemId: string; formId: string; qty: number }) =>
+      apiPatch(`/api/households/${householdId}/items/${itemId}/forms/${formId}`, { action: "consume", qty }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: householdKeys.pantry(householdId) }),
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't consume item"),
+  });
+}
+
+export interface HouseholdConvertOutput {
+  unit: string;
+  qty: number;
+  location: Location;
+  shelfLifeDays: number;
+  note?: string;
+}
+
+export function useConvertHouseholdForm(householdId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({
+      itemId,
+      formId,
+      qty,
+      outputs,
+    }: {
+      itemId: string;
+      formId: string;
+      qty: number;
+      outputs: HouseholdConvertOutput[];
+    }) => apiPatch(`/api/households/${householdId}/items/${itemId}/forms/${formId}`, { action: "convert", qty, outputs }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: householdKeys.pantry(householdId) });
+      toast.success("Converted");
+    },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't convert item"),
+  });
+}
+
+export function useDeleteHouseholdForm(householdId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ itemId, formId }: { itemId: string; formId: string }) =>
+      apiDelete(`/api/households/${householdId}/items/${itemId}/forms/${formId}`),
+    onSuccess: () => qc.invalidateQueries({ queryKey: householdKeys.pantry(householdId) }),
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't remove item"),
+  });
+}
+
+// Household Pantry tab's Clear-Out mode — mirrors useDiscardClearOut in
+// items.ts. No household Restock (not requested).
+export function useDiscardHouseholdClearOut(householdId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (selections: { itemId: string; formId: string }[]) =>
+      apiPost<{ ok: true; count: number }>(`/api/households/${householdId}/clear-out/discard`, { selections }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: householdKeys.pantry(householdId) }),
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't discard items"),
+  });
+}

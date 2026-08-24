@@ -1,9 +1,12 @@
 import { ObjectId } from "mongodb";
 import { householdItemRepository } from "@/lib/repositories/householdItemRepository";
 import * as resolution from "@/lib/services/householdItemResolutionService";
+import { matchCleanFraction } from "@/lib/domain/fractions";
 import type { HouseholdItem } from "@/lib/schemas/householdItem";
 import type { Form } from "@/lib/schemas/userItem";
 import type { Location } from "@/lib/schemas/shared";
+
+const EPSILON = 1e-9;
 
 // Mirrors pantryService.ts, scoped by householdId.
 export async function listCurrentHousehold(householdId: ObjectId): Promise<HouseholdItem[]> {
@@ -66,4 +69,81 @@ async function resolveSelection(
     case "manual":
       return resolution.createManualHouseholdItem(householdId, addedByUserId, selection.manual);
   }
+}
+
+// Mirrors pantryService.ts's consumeForm/convertForm/deleteForm exactly,
+// scoped by householdId — same clean-fraction auto-split behavior.
+export async function consumeForm(
+  householdId: ObjectId,
+  itemId: ObjectId,
+  formId: ObjectId,
+  consumedQty: number
+): Promise<void> {
+  const item = await householdItemRepository.findById(householdId, itemId);
+  if (!item) throw new Error("Item not found");
+  const form = item.forms.find((f) => f.id.equals(formId));
+  if (!form) throw new Error("Form not found");
+  if (consumedQty > form.qty + EPSILON) throw new Error("Can't consume more than what's left");
+
+  const whole = Math.floor(consumedQty);
+  const frac = consumedQty - whole;
+  const fraction = frac > EPSILON ? matchCleanFraction(frac) : null;
+
+  const unitsExtracted = fraction ? whole + 1 : consumedQty;
+  const remaining = form.qty - unitsExtracted;
+  if (remaining <= EPSILON) {
+    await householdItemRepository.removeForm(householdId, itemId, formId);
+  } else {
+    await householdItemRepository.updateForm(householdId, itemId, formId, { qty: remaining });
+  }
+
+  if (fraction) {
+    await householdItemRepository.addForm(householdId, itemId, {
+      unit: fraction.unit,
+      qty: fraction.piecesRemaining,
+      location: form.location,
+      shelfLifeDays: form.shelfLifeDays,
+      addedDate: new Date(),
+    });
+  }
+}
+
+export interface ConvertOutput {
+  unit: string;
+  qty: number;
+  location: Location;
+  shelfLifeDays: number;
+  note?: string;
+}
+
+export async function convertForm(
+  householdId: ObjectId,
+  itemId: ObjectId,
+  formId: ObjectId,
+  convertQty: number,
+  outputs: ConvertOutput[]
+): Promise<void> {
+  const item = await householdItemRepository.findById(householdId, itemId);
+  if (!item) throw new Error("Item not found");
+  const form = item.forms.find((f) => f.id.equals(formId));
+  if (!form) throw new Error("Form not found");
+  if (convertQty > form.qty + EPSILON) throw new Error("Can't convert more than what's left");
+
+  const remaining = form.qty - convertQty;
+  if (remaining <= EPSILON) {
+    await householdItemRepository.removeForm(householdId, itemId, formId);
+  } else {
+    await householdItemRepository.updateForm(householdId, itemId, formId, { qty: remaining });
+  }
+
+  for (const output of outputs) {
+    await householdItemRepository.addForm(householdId, itemId, {
+      ...output,
+      addedDate: new Date(),
+    });
+  }
+}
+
+export async function deleteForm(householdId: ObjectId, itemId: ObjectId, formId: ObjectId): Promise<void> {
+  await householdItemRepository.removeForm(householdId, itemId, formId);
 }

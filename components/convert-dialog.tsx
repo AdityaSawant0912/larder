@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useConvertForm, type ConvertOutput } from "@/lib/queries/items";
+import { useConvertHouseholdForm } from "@/lib/queries/households";
 import { useUnitPresets, useLearnUnit } from "@/lib/queries/unitPresets";
 import { UnitPicker } from "@/components/unit-picker";
 import { LOCATIONS } from "@/lib/schemas/location";
@@ -26,18 +27,26 @@ export function ConvertDialog({
   form,
   open,
   onOpenChange,
+  householdId,
 }: {
   itemId: string;
   category: string;
   form: FormDTO;
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  // Set for a household item — routes the convert through the
+  // household-scoped API instead of the personal one.
+  householdId?: string;
 }) {
   const [convertQty, setConvertQty] = useState(form.qty);
   const [outputs, setOutputs] = useState<ConvertOutput[]>([
     { unit: form.unit, qty: 1, location: form.location, shelfLifeDays: form.shelfLifeDays },
   ]);
-  const convertForm = useConvertForm();
+  const personalConvert = useConvertForm();
+  const householdConvert = useConvertHouseholdForm(householdId ?? "");
+  const convertForm = householdId ? householdConvert : personalConvert;
+  // Unit presets are personal regardless of item source — fine to reuse
+  // as suggestions even for a household item's convert output.
   const { data: unitPresets } = useUnitPresets(category, itemId);
   const learnUnit = useLearnUnit();
 

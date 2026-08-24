@@ -147,7 +147,7 @@ export default function HomePage() {
                     item={item}
                     mode="track"
                     householdBadge={item.householdName}
-                    readOnly
+                    householdId={item.householdId}
                   />
                 ))}
               </AnimatePresence>

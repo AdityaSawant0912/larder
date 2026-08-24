@@ -11,8 +11,6 @@ import { formSchema, type Form, type Threshold } from "@/lib/schemas/userItem";
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 
 // Mirrors userItemRepository.ts, scoped by householdId instead of userId.
-// updateForm/removeForm/consume/convert aren't needed yet (see plan) — add
-// them here alongside Restock/Clear-Out for households if that gets asked for.
 export const householdItemRepository = {
   async findAllForHousehold(householdId: ObjectId): Promise<HouseholdItem[]> {
     const col = await householdItemsCollection();
@@ -120,5 +118,33 @@ export const householdItemRepository = {
       { session }
     );
     return parsed;
+  },
+
+  async updateForm(
+    householdId: ObjectId,
+    itemId: ObjectId,
+    formId: ObjectId,
+    patch: Partial<Pick<Form, "unit" | "qty" | "note" | "location">>
+  ): Promise<void> {
+    const col = await householdItemsCollection();
+    const setFields: Record<string, unknown> = { updatedAt: new Date() };
+    for (const [key, value] of Object.entries(patch)) {
+      setFields[`forms.$.${key}`] = value;
+    }
+    await col.updateOne({ _id: itemId, householdId, "forms.id": formId }, { $set: setFields });
+  },
+
+  async removeForm(
+    householdId: ObjectId,
+    itemId: ObjectId,
+    formId: ObjectId,
+    session?: ClientSession
+  ): Promise<void> {
+    const col = await householdItemsCollection();
+    await col.updateOne(
+      { _id: itemId, householdId },
+      { $pull: { forms: { id: formId } }, $set: { updatedAt: new Date() } },
+      { session }
+    );
   },
 };
