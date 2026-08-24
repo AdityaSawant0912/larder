@@ -11,6 +11,8 @@ import type {
   HouseholdCatalogSearchResultDTO,
   HouseholdGroceryListItemDTO,
   HouseholdGroceryAddSelectionInput,
+  ResolveAndAddHouseholdFormInput,
+  FormDTO,
 } from "@/lib/types/dto";
 import type { Location } from "@/lib/schemas/shared";
 
@@ -119,6 +121,21 @@ export function useHouseholdPantry(householdId: string) {
     queryKey: householdKeys.pantry(householdId),
     queryFn: () => apiGet<HouseholdItemDTO[]>(`/api/households/${householdId}/items`),
     enabled: !!householdId,
+  });
+}
+
+// Household Pantry tab's "Add" — direct add, no grocery list detour
+// (mirrors useResolveAndAddForm in lib/queries/items.ts).
+export function useResolveAndAddHouseholdForm(householdId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: ResolveAndAddHouseholdFormInput) =>
+      apiPost<{ item: HouseholdItemDTO; form: FormDTO }>(`/api/households/${householdId}/items/resolve-and-add`, input),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: householdKeys.pantry(householdId) });
+      toast.success("Added to household pantry");
+    },
+    onError: (err) => toast.error(err instanceof Error ? err.message : "Couldn't add item"),
   });
 }
 

@@ -213,3 +213,13 @@ export type HouseholdGroceryAddSelectionInput =
   | { kind: "global"; globalItemId: string }
   | { kind: "householdItem"; householdItemId: string }
   | { kind: "freeText"; name: string; category: string };
+
+export interface ResolveAndAddHouseholdFormInput {
+  selection: HouseholdItemSelectionInput;
+  unit: string;
+  qty: number;
+  location: Location;
+  shelfLifeDays: number;
+  note?: string;
+  saveAsDefault?: boolean;
+}
