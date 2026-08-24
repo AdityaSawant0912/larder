@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, ShoppingCart, Clock, Settings } from "lucide-react";
+import { Home, ShoppingCart, Clock, Settings, Users } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { href: "/app", label: "Home", icon: Home },
   { href: "/grocery", label: "Grocery", icon: ShoppingCart },
   { href: "/use-soon", label: "Use Soon", icon: Clock },
+  { href: "/households", label: "Households", icon: Users },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
 

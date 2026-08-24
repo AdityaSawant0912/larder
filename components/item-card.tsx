@@ -13,26 +13,50 @@ import { ConvertDialog } from "@/components/convert-dialog";
 import { useConsumeForm, useDeleteForm } from "@/lib/queries/items";
 import { daysLeft, freshnessState, FRESHNESS_GAUGE_CEILING_DAYS } from "@/lib/domain/freshness";
 import { cn } from "@/lib/utils";
-import type { UserItemDTO, FormDTO } from "@/lib/types/dto";
+import type { FormDTO } from "@/lib/types/dto";
 
 export type ItemCardMode = "track" | "clearOut";
+
+// A minimal shape both UserItemDTO and a household item (plus its
+// householdName tag) satisfy — lets ItemCard render either.
+export interface ItemCardData {
+  _id: string;
+  name: string;
+  category: string;
+  forms: FormDTO[];
+}
 
 export function ItemCard({
   item,
   mode,
   selectedFormIds,
   onToggleSelect,
+  householdBadge,
+  readOnly,
 }: {
-  item: UserItemDTO;
+  item: ItemCardData;
   mode: ItemCardMode;
   selectedFormIds?: Set<string>;
   onToggleSelect?: (itemId: string, formId: string) => void;
+  // Set when this card is a shared item merged in from a household's
+  // pantry — shows which household it belongs to and hides the
+  // consume/convert/delete actions (those aren't wired up for household
+  // items yet, see plan's "out of scope").
+  householdBadge?: string;
+  readOnly?: boolean;
 }) {
   return (
     <motion.div layout initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.18 }}>
       <Card>
         <CardHeader>
-          <CardTitle className="font-display text-xl font-semibold">{item.name}</CardTitle>
+          <CardTitle className="flex items-center justify-between gap-2 font-display text-xl font-semibold">
+            {item.name}
+            {householdBadge && (
+              <span className="shrink-0 rounded-full bg-accent px-2 py-0.5 text-xs font-normal text-accent-foreground">
+                {householdBadge}
+              </span>
+            )}
+          </CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
           <AnimatePresence initial={false}>
@@ -45,6 +69,7 @@ export function ItemCard({
                 mode={mode}
                 selected={selectedFormIds?.has(form.id) ?? false}
                 onToggleSelect={onToggleSelect}
+                readOnly={readOnly}
               />
             ))}
           </AnimatePresence>
@@ -61,6 +86,7 @@ function FormRow({
   mode,
   selected,
   onToggleSelect,
+  readOnly,
 }: {
   itemId: string;
   category: string;
@@ -68,6 +94,7 @@ function FormRow({
   mode: ItemCardMode;
   selected: boolean;
   onToggleSelect?: (itemId: string, formId: string) => void;
+  readOnly?: boolean;
 }) {
   const [convertOpen, setConvertOpen] = useState(false);
   const [consumeQty, setConsumeQty] = useState(1);
@@ -95,6 +122,7 @@ function FormRow({
         <div className="flex items-baseline justify-between gap-2">
           <span className="font-mono text-sm">
             {form.qty} {form.unit}
+            <span className="ml-1.5 text-muted-foreground">· {form.location}</span>
           </span>
           <span
             className={cn(
@@ -108,7 +136,7 @@ function FormRow({
         <FreshnessGauge fraction={fraction} state={state} seed={form.id} />
       </div>
 
-      {mode === "track" && (
+      {mode === "track" && !readOnly && (
         <div className="flex shrink-0 items-center gap-0.5">
           <Popover>
             <PopoverTrigger

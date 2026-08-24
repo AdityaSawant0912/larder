@@ -12,6 +12,7 @@ import { AddItemFlow, type AddItemDetails } from "@/components/add-item-flow";
 import { ExportSheet } from "@/components/export-sheet";
 import { FloatingAddButton } from "@/components/floating-add-button";
 import { useCurrentPantry, useResolveAndAddForm, useCommitRestock, useDiscardClearOut, type RestockQueueRow } from "@/lib/queries/items";
+import { useAllHouseholdPantries } from "@/lib/queries/households";
 import { LOCATIONS, type Location } from "@/lib/schemas/location";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +20,7 @@ type StagedRow = RestockQueueRow & { name: string; key: string };
 
 export default function HomePage() {
   const { data: pantry, isLoading } = useCurrentPantry();
+  const { items: householdItems, isLoading: householdItemsLoading } = useAllHouseholdPantries();
   const [mode, setMode] = useState<HomeMode>("track");
   const [locationFilter, setLocationFilter] = useState<Location | "all">("all");
   const [query, setQuery] = useState("");
@@ -32,6 +34,16 @@ export default function HomePage() {
   const discardClearOut = useDiscardClearOut();
 
   const filtered = (pantry ?? [])
+    .filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
+    .map((item) => ({
+      ...item,
+      forms: locationFilter === "all" ? item.forms : item.forms.filter((f) => f.location === locationFilter),
+    }))
+    .filter((item) => item.forms.length > 0);
+
+  // Merged into Home's read-only "track" view only — clearOut/restock stay
+  // personal-only for now (see plan's "out of scope").
+  const filteredShared = householdItems
     .filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
     .map((item) => ({
       ...item,
@@ -113,13 +125,13 @@ export default function HomePage() {
             ))}
           </div>
 
-          {isLoading ? (
+          {isLoading || householdItemsLoading ? (
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
               {[...Array(3)].map((_, i) => (
                 <Skeleton key={i} className="h-32" />
               ))}
             </div>
-          ) : filtered.length === 0 ? (
+          ) : filtered.length === 0 && filteredShared.length === 0 ? (
             <p className="py-12 text-center text-sm text-muted-foreground">
               Nothing here yet. Add your first item.
             </p>
@@ -128,6 +140,15 @@ export default function HomePage() {
               <AnimatePresence initial={false}>
                 {filtered.map((item) => (
                   <ItemCard key={item._id} item={item} mode="track" />
+                ))}
+                {filteredShared.map((item) => (
+                  <ItemCard
+                    key={`shared-${item._id}`}
+                    item={item}
+                    mode="track"
+                    householdBadge={item.householdName}
+                    readOnly
+                  />
                 ))}
               </AnimatePresence>
             </div>

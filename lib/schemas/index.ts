@@ -5,3 +5,6 @@ export * from "./store";
 export * from "./groceryList";
 export * from "./listTemplate";
 export * from "./userUnitPreset";
+export * from "./household";
+export * from "./householdItem";
+export * from "./householdGroceryList";

@@ -6,6 +6,9 @@ import type { UserStore, GlobalStore } from "@/lib/schemas/store";
 import type { GroceryListItem } from "@/lib/schemas/groceryList";
 import type { ListTemplate } from "@/lib/schemas/listTemplate";
 import type { UserUnitPreset } from "@/lib/schemas/userUnitPreset";
+import type { Household, HouseholdInvite } from "@/lib/schemas/household";
+import type { HouseholdItem } from "@/lib/schemas/householdItem";
+import type { HouseholdGroceryListItem } from "@/lib/schemas/householdGroceryList";
 
 export async function userItemsCollection(): Promise<Collection<UserItem>> {
   return (await getDb()).collection<UserItem>("userItems");
@@ -27,4 +30,16 @@ export async function listTemplatesCollection(): Promise<Collection<ListTemplate
 }
 export async function userUnitPresetsCollection(): Promise<Collection<UserUnitPreset>> {
   return (await getDb()).collection<UserUnitPreset>("userUnitPresets");
+}
+export async function householdsCollection(): Promise<Collection<Household>> {
+  return (await getDb()).collection<Household>("households");
+}
+export async function householdInvitesCollection(): Promise<Collection<HouseholdInvite>> {
+  return (await getDb()).collection<HouseholdInvite>("householdInvites");
+}
+export async function householdItemsCollection(): Promise<Collection<HouseholdItem>> {
+  return (await getDb()).collection<HouseholdItem>("householdItems");
+}
+export async function householdGroceryListCollection(): Promise<Collection<HouseholdGroceryListItem>> {
+  return (await getDb()).collection<HouseholdGroceryListItem>("householdGroceryList");
 }

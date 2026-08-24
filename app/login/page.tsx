@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "@/lib/auth/client";
 import { Logo } from "@/components/logo";
@@ -10,11 +10,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function LoginPage() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
+function LoginForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
+  const next = searchParams.get("next");
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -26,7 +36,7 @@ export default function LoginPage() {
       setError(signInError.message ?? "Couldn't sign in.");
       return;
     }
-    router.push("/app");
+    router.push(next || "/app");
     router.refresh();
   }
 
@@ -69,7 +79,10 @@ export default function LoginPage() {
 
         <p className="text-center text-sm text-muted-foreground">
           New here?{" "}
-          <Link href="/signup" className="text-primary underline-offset-4 hover:underline">
+          <Link
+            href={next ? `/signup?next=${encodeURIComponent(next)}` : "/signup"}
+            className="text-primary underline-offset-4 hover:underline"
+          >
             Create an account
           </Link>
         </p>

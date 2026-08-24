@@ -131,3 +131,85 @@ export type GroceryAddSelectionInput =
   | { kind: "global"; globalItemId: string }
   | { kind: "userItem"; userItemId: string }
   | { kind: "freeText"; name: string; category: string };
+
+export interface HouseholdDTO {
+  _id: string;
+  name: string;
+  ownerId: string;
+  memberIds: string[];
+  createdAt: string;
+  isOwner: boolean;
+}
+
+export interface HouseholdMemberDTO {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export interface HouseholdDetailDTO {
+  household: Omit<HouseholdDTO, "isOwner">;
+  members: HouseholdMemberDTO[];
+}
+
+export interface HouseholdInviteDTO {
+  _id: string;
+  householdId: string;
+  token: string;
+  createdByUserId: string;
+  createdAt: string;
+  revoked: boolean;
+}
+
+export interface HouseholdItemDTO {
+  _id: string;
+  householdId: string;
+  addedByUserId: string;
+  name: string;
+  category: string;
+  globalItemId: string | null;
+  defaultUnit: string;
+  defaultShelfLifeDays: number;
+  defaultLocation: Location;
+  thresholds: ThresholdDTO[];
+  forms: FormDTO[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface HouseholdCatalogSearchResultDTO {
+  globalMatches: GlobalItemDTO[];
+  householdMatches: HouseholdItemDTO[];
+}
+
+export type HouseholdItemSelectionInput =
+  | { kind: "global"; globalItemId: string }
+  | { kind: "householdItem"; householdItemId: string }
+  | {
+      kind: "manual";
+      manual: {
+        name: string;
+        category: string;
+        defaultUnit: string;
+        defaultShelfLifeDays: number;
+        defaultLocation: Location;
+      };
+    };
+
+export interface HouseholdGroceryListItemDTO {
+  _id: string;
+  householdId: string;
+  addedByUserId: string;
+  householdItemId: string | null;
+  name: string;
+  category: string;
+  qty: number;
+  unit: string;
+  checked: boolean;
+  createdAt: string;
+}
+
+export type HouseholdGroceryAddSelectionInput =
+  | { kind: "global"; globalItemId: string }
+  | { kind: "householdItem"; householdItemId: string }
+  | { kind: "freeText"; name: string; category: string };
